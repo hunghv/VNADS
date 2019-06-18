@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using VNADS.Models;
 
@@ -10,9 +8,17 @@ namespace VNADS.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var authResult = await HttpContext.AuthenticateAsync();
+            var a = User;
+            var vm = new ProfileViewModel
+            {
+                Claims = authResult.Principal.Claims,
+                Name = authResult.Principal.Identity?.Name
+            };
+
+            return View(vm);
         }
 
         public IActionResult Privacy()
