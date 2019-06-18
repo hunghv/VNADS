@@ -1,0 +1,2 @@
+# VNADS
+.net core
