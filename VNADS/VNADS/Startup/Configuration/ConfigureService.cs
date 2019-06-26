@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,8 +14,9 @@ using Microsoft.Extensions.Logging;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Services.Mappings;
 using Swashbuckle.AspNetCore.Swagger;
+using VNADS.Models;
 
-namespace VNADS.Configuration
+namespace VNADS.Startup.Configuration
 {
     public class ConfigureService
     {
@@ -28,6 +30,11 @@ namespace VNADS.Configuration
 
         private static void InitAuth(IServiceCollection services)
         {
+            //add identity
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<CoffeeRenoContext>()
+                .AddDefaultTokenProviders();
+
             services.AddHttpContextAccessor();
 
             services.AddAuthentication(options =>

@@ -20,21 +20,31 @@ namespace Data.Context
         public DbSet<PostType> PostTypes { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostImage> PostImages { get; set; }
+        //public DbSet<ApplicationLanguage> Languages { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UserLoginHistory>().ToTable("UserLoginHistory");
-            modelBuilder.Entity<UserProfile>().ToTable("UserProfile");
-            modelBuilder.Entity<UserRole>().ToTable("UserRole");
-            modelBuilder.Entity<Role>().ToTable("Role");
+            ////Init Data
+            //modelBuilder.Entity<Role>().HasData(
+            //    new Role { Name = "Administrator", CreatedDate = DateTime.Now, CreatedBy = 1, IsDeleted = false },
+            //    new Role { Name = "Poster", CreatedDate = DateTime.Now, CreatedBy = 1, IsDeleted = false },
+            //    new Role { Name = "Normal User", CreatedDate = DateTime.Now, CreatedBy = 1, IsDeleted = false });
 
-            modelBuilder.Entity<AdsType>().ToTable("AdsType");
-            modelBuilder.Entity<AdsForm>().ToTable("AdsForm");
-            modelBuilder.Entity<Image>().ToTable("Image");
-            modelBuilder.Entity<PostType>().ToTable("PostType");
-            modelBuilder.Entity<Post>().ToTable("Post");
-            modelBuilder.Entity<PostImage>().ToTable("PostImage");
+            //modelBuilder.Entity<ApplicationLanguage>().HasData(
+            //        LanguageCreator.GetInitialLanguages()
+            //    );
+            modelBuilder.Entity<UserLoginHistory>().ToTable("VNADS_UserLoginHistory");
+            modelBuilder.Entity<UserProfile>().ToTable("VNADS_UserProfile");
+            modelBuilder.Entity<UserRole>().ToTable("VNADS_UserRole");
+            modelBuilder.Entity<Role>().ToTable("VNADS_Role");
+
+            modelBuilder.Entity<AdsType>().ToTable("VNADS_AdsType");
+            modelBuilder.Entity<AdsForm>().ToTable("VNADS_AdsForm");
+            modelBuilder.Entity<Image>().ToTable("VNADS_Image");
+            modelBuilder.Entity<PostType>().ToTable("VNADS_PostType");
+            modelBuilder.Entity<Post>().ToTable("VNADS_Post");
+            modelBuilder.Entity<PostImage>().ToTable("VNADS_PostImage");
         }
     }
 }

@@ -1,0 +1,68 @@
+INFO  19-54-2019 21:54:01 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/2.0 GET https://localhost:44381/   
+INFO  19-54-2019 21:54:01 Microsoft.AspNetCore.Routing.EndpointMiddleware [9] - Executing endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  19-54-2019 21:54:01 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  19-54-2019 21:54:01 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  19-54-2019 21:54:01 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 51.4812ms. 
+INFO  19-54-2019 21:54:01 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [9] - Executing ViewResult, running view Index. 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [9] - Executed ViewResult - view Index executed in 259.4849ms. 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 344.5231ms 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Routing.EndpointMiddleware [9] - Executed endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 445.7795ms 200 text/html; charset=utf-8 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/2.0 GET https://localhost:44381/lib/bootstrap/dist/css/bootstrap.css   
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/2.0 GET https://localhost:44381/lib/bootstrap/dist/js/bootstrap.bundle.js   
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/2.0 GET https://localhost:44381/lib/jquery/dist/jquery.js   
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/2.0 GET https://localhost:44381/css/site.css   
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request starting HTTP/2.0 GET https://localhost:44381/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0   
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [12] - Sending file. Request path: '/js/site.js'. Physical path: 'F:\My projects\VNADS\VNADS\VNADS\wwwroot\js\site.js' 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [10] - Sending file. Request path: '/css/site.css'. Physical path: 'F:\My projects\VNADS\VNADS\VNADS\wwwroot\css\site.css' 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request finished in 139.4259ms 200 application/javascript 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 141.4003ms 200 text/css 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [12] - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.js'. Physical path: 'F:\My projects\VNADS\VNADS\VNADS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js' 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [21] - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'F:\My projects\VNADS\VNADS\VNADS\wwwroot\lib\bootstrap\dist\css\bootstrap.css' 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request finished in 179.5735ms 200 application/javascript 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request finished in 179.5817ms 200 text/css 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [11] - Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'F:\My projects\VNADS\VNADS\VNADS\wwwroot\lib\jquery\dist\jquery.js' 
+INFO  19-54-2019 21:54:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 262.4277ms 200 application/javascript 
+INFO  19-54-2019 21:54:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request starting HTTP/2.0 GET https://localhost:44381/lib/bootstrap/dist/js/bootstrap.bundle.js.map   
+INFO  19-54-2019 21:54:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request starting HTTP/2.0 GET https://localhost:44381/lib/bootstrap/dist/css/bootstrap.css.map   
+INFO  19-54-2019 21:54:07 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [10] - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.js.map'. Physical path: 'F:\My projects\VNADS\VNADS\VNADS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map' 
+INFO  19-54-2019 21:54:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 76.8359ms 200 text/plain 
+INFO  19-54-2019 21:54:07 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [10] - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'F:\My projects\VNADS\VNADS\VNADS\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map' 
+INFO  19-54-2019 21:54:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 66.0683ms 200 text/plain 
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/2.0 GET https://localhost:44381/   
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Routing.EndpointMiddleware [10] - Executing endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 26.7965ms. 
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executing ViewResult, running view Index. 
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 188.8254ms 
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Routing.EndpointMiddleware [10] - Executed endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+ERROR 19-01-2019 22:01:45 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [10] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Microsoft.AspNetCore.Identity.UserManager`1[Microsoft.AspNetCore.Identity.IdentityBuilder]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorPagePropertyActivator.<>c__DisplayClass8_0.<CreateActivateInfo>b__1(ViewContext context)
+   at Microsoft.Extensions.Internal.PropertyActivator`1.Activate(Object instance, TContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  19-01-2019 22:01:45 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 512.6189ms 500 text/html; charset=utf-8 
