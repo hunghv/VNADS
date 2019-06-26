@@ -48,7 +48,7 @@ namespace Data.Migrations
 
                     b.HasIndex("AdsTypeId");
 
-                    b.ToTable("AdsForm");
+                    b.ToTable("VNADS_AdsForm");
                 });
 
             modelBuilder.Entity("Data.Entities.AdsType", b =>
@@ -78,7 +78,189 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AdsType");
+                    b.ToTable("VNADS_AdsType");
+                });
+
+            modelBuilder.Entity("Data.Entities.ApplicationLanguage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedBy");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<int?>("DeletedBy");
+
+                    b.Property<DateTime?>("DeletedDate");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasMaxLength(64);
+
+                    b.Property<string>("Icon")
+                        .HasMaxLength(128);
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<bool>("IsDisabled");
+
+                    b.Property<int?>("ModifiedBy");
+
+                    b.Property<DateTime?>("ModifiedDate");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(10);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VNADS_ApplicationLanguage");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(664),
+                            DisplayName = "English",
+                            Icon = "famfamfam-flags gb",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "en"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(681),
+                            DisplayName = "العربية",
+                            Icon = "famfamfam-flags sa",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "ar"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(683),
+                            DisplayName = "German",
+                            Icon = "famfamfam-flags de",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "de"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(684),
+                            DisplayName = "Italiano",
+                            Icon = "famfamfam-flags it",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "it"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(685),
+                            DisplayName = "Français",
+                            Icon = "famfamfam-flags fr",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "fr"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(691),
+                            DisplayName = "Português",
+                            Icon = "famfamfam-flags br",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "pt-BR"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(692),
+                            DisplayName = "Türkçe",
+                            Icon = "famfamfam-flags tr",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "tr"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(693),
+                            DisplayName = "Русский",
+                            Icon = "famfamfam-flags ru",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "ru"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(694),
+                            DisplayName = "简体中文",
+                            Icon = "famfamfam-flags cn",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "zh-Hans"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(697),
+                            DisplayName = "Español México",
+                            Icon = "famfamfam-flags mx",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "es-MX"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(698),
+                            DisplayName = "Nederlands",
+                            Icon = "famfamfam-flags nl",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "nl"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(699),
+                            DisplayName = "日本語",
+                            Icon = "famfamfam-flags jp",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "ja"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(700),
+                            DisplayName = "Viet Nam",
+                            Icon = "famfamfam-flags vn",
+                            IsDeleted = false,
+                            IsDisabled = false,
+                            Name = "vn"
+                        });
                 });
 
             modelBuilder.Entity("Data.Entities.Image", b =>
@@ -104,7 +286,7 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Image");
+                    b.ToTable("VNADS_Image");
                 });
 
             modelBuilder.Entity("Data.Entities.Post", b =>
@@ -156,7 +338,7 @@ namespace Data.Migrations
 
                     b.HasIndex("UserProfileId");
 
-                    b.ToTable("Post");
+                    b.ToTable("VNADS_Post");
                 });
 
             modelBuilder.Entity("Data.Entities.PostImage", b =>
@@ -188,7 +370,7 @@ namespace Data.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("PostImage");
+                    b.ToTable("VNADS_PostImage");
                 });
 
             modelBuilder.Entity("Data.Entities.PostType", b =>
@@ -218,7 +400,7 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PostType");
+                    b.ToTable("VNADS_PostType");
                 });
 
             modelBuilder.Entity("Data.Entities.Role", b =>
@@ -245,7 +427,33 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Role");
+                    b.ToTable("VNADS_Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 361, DateTimeKind.Local).AddTicks(8929),
+                            IsDeleted = false,
+                            Name = "Administrator"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 362, DateTimeKind.Local).AddTicks(6677),
+                            IsDeleted = false,
+                            Name = "Poster"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedBy = 1,
+                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 362, DateTimeKind.Local).AddTicks(6687),
+                            IsDeleted = false,
+                            Name = "Normal User"
+                        });
                 });
 
             modelBuilder.Entity("Data.Entities.UserLoginHistory", b =>
@@ -279,7 +487,7 @@ namespace Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserLoginHistory");
+                    b.ToTable("VNADS_UserLoginHistory");
                 });
 
             modelBuilder.Entity("Data.Entities.UserProfile", b =>
@@ -296,6 +504,8 @@ namespace Data.Migrations
 
                     b.Property<DateTime>("CreatedDate");
 
+                    b.Property<DateTime>("DateOfBirth");
+
                     b.Property<int?>("DeletedBy");
 
                     b.Property<DateTime?>("DeletedDate");
@@ -306,6 +516,7 @@ namespace Data.Migrations
                     b.Property<string>("Domain");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasMaxLength(100);
 
                     b.Property<bool>("IsDeleted");
@@ -328,11 +539,12 @@ namespace Data.Migrations
                     b.Property<byte[]>("ThumbnailPhoto");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasMaxLength(50);
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserProfile");
+                    b.ToTable("VNADS_UserProfile");
                 });
 
             modelBuilder.Entity("Data.Entities.UserRole", b =>
@@ -364,7 +576,7 @@ namespace Data.Migrations
 
                     b.HasIndex("UserProfileId");
 
-                    b.ToTable("UserRole");
+                    b.ToTable("VNADS_UserRole");
                 });
 
             modelBuilder.Entity("Data.Entities.AdsForm", b =>

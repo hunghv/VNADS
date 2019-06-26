@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 using Data.Entities;
 using Data.Repository.Implementation;
+using Services.Interfaces;
 using Services.ViewModels;
 
 namespace Services.Services
 {
-    public class AccountManagerService
+    public class AccountManagerService:IAccountManagerService
     {
         private readonly UserProfileRepository _userProfileRepository;
         public AccountManagerService(UserProfileRepository userProfileRepository)
@@ -46,6 +46,11 @@ namespace Services.Services
                 throw;
             }
             return null;
+        }
+
+        public Task<(bool, UserProfile)> ValidateUserCredentialsAsync(string username, string password)
+        {
+            throw new NotImplementedException();
         }
     }
 }

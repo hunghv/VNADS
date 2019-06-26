@@ -1,4 +1,6 @@
-﻿using Data.Entities;
+﻿using System;
+using Data.Entities;
+using Data.Seed;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Context
@@ -20,21 +22,32 @@ namespace Data.Context
         public DbSet<PostType> PostTypes { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostImage> PostImages { get; set; }
+        public DbSet<ApplicationLanguage> ApplicationLanguages { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UserLoginHistory>().ToTable("UserLoginHistory");
-            modelBuilder.Entity<UserProfile>().ToTable("UserProfile");
-            modelBuilder.Entity<UserRole>().ToTable("UserRole");
-            modelBuilder.Entity<Role>().ToTable("Role");
+            //modelBuilder.Entity<UserLoginHistory>().ToTable("UserLoginHistory");
+            //modelBuilder.Entity<UserProfile>().ToTable("UserProfile");
+            //modelBuilder.Entity<UserRole>().ToTable("UserRole");
+            //modelBuilder.Entity<Role>().ToTable("Role");
 
-            modelBuilder.Entity<AdsType>().ToTable("AdsType");
-            modelBuilder.Entity<AdsForm>().ToTable("AdsForm");
-            modelBuilder.Entity<Image>().ToTable("Image");
-            modelBuilder.Entity<PostType>().ToTable("PostType");
-            modelBuilder.Entity<Post>().ToTable("Post");
-            modelBuilder.Entity<PostImage>().ToTable("PostImage");
+            //modelBuilder.Entity<AdsType>().ToTable("AdsType");
+            //modelBuilder.Entity<AdsForm>().ToTable("AdsForm");
+            //modelBuilder.Entity<Image>().ToTable("Image");
+            //modelBuilder.Entity<PostType>().ToTable("PostType");
+            //modelBuilder.Entity<Post>().ToTable("Post");
+            //modelBuilder.Entity<PostImage>().ToTable("PostImage");
+
+            ////Init Data
+            modelBuilder.Entity<Role>().HasData(
+                new Role { Id = 1, Name = "Administrator", CreatedDate = DateTime.Now, CreatedBy = 1, IsDeleted = false },
+               new Role { Id = 2, Name = "Poster", CreatedDate = DateTime.Now, CreatedBy = 1, IsDeleted = false },
+                new Role { Id = 3, Name = "Normal User", CreatedDate = DateTime.Now, CreatedBy = 1, IsDeleted = false });
+
+            modelBuilder.Entity<ApplicationLanguage>().HasData(
+                    LanguageCreator.GetInitialLanguages()
+                );
         }
     }
 }

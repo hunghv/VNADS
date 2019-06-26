@@ -29,4 +29,53 @@ namespace Data.Repository.Implementation
         {
         }
     }
+
+    public class ImageRepository : EntityBaseRepository<Image>, IImageRepository
+    {
+        public ImageRepository(CoffeeRenoContext context) : base(context)
+        {
+        }
+    }
+
+    public class AdsFormRepository : EntityBaseRepository<AdsForm>, IAdsFormRepository
+    {
+        public AdsFormRepository(CoffeeRenoContext context) : base(context)
+        {
+        }
+    }
+
+    public class ApplicationLanguageRepository : EntityBaseRepository<ApplicationLanguage>, IApplicationLanguageRepository
+    {
+        public ApplicationLanguageRepository(CoffeeRenoContext context) : base(context)
+        {
+        }
+    }
+
+    public class AdsTypeRepository : EntityBaseRepository<AdsType>, IAdsTypeRepository
+    {
+        public AdsTypeRepository(CoffeeRenoContext context) : base(context)
+        {
+        }
+    }
+
+    public class PostRepository : EntityBaseRepository<Post>, IPostRepository
+    {
+        public PostRepository(CoffeeRenoContext context) : base(context)
+        {
+        }
+    }
+
+    public class PostImageRepository : EntityBaseRepository<PostImage>, IPostImageRepository
+    {
+        public PostImageRepository(CoffeeRenoContext context) : base(context)
+        {
+        }
+    }
+
+    public class PostTypeRepository : EntityBaseRepository<PostType>, IPostTypeRepository
+    {
+        public PostTypeRepository(CoffeeRenoContext context) : base(context)
+        {
+        }
+    }
 }
