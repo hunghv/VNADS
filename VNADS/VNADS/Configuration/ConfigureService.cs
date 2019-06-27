@@ -48,7 +48,8 @@ namespace VNADS.Configuration
                 })
                 .AddCookie(options =>
                 {
-                    options.LoginPath = "/signin";
+                    options.LoginPath = "/auth/login";
+                    options.LogoutPath = "/auth/logout";
                 });
         }
 
@@ -110,7 +111,7 @@ namespace VNADS.Configuration
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
             loggerFactory.AddLog4Net(configuration.GetValue<string>("Log4NetConfigFile:Name"));
-            
+
         }
 
         private static void InitAutoMapper(IServiceCollection services)

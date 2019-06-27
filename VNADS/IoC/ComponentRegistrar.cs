@@ -35,8 +35,7 @@ namespace IoC
             services.AddScoped(typeof(IAdsTypeRepository), typeof(AdsTypeRepository));
             services.AddScoped(typeof(IApplicationLanguageRepository), typeof(ApplicationLanguageRepository));
             services.AddScoped(typeof(IImageRepository), typeof(ImageRepository));
-            services.AddScoped(typeof(IPostRepository), typeof(IPostRepository));
-            services.AddScoped(typeof(IPostRepository), typeof(IPostRepository));
+            services.AddScoped(typeof(IPostRepository), typeof(PostRepository));
             services.AddScoped(typeof(IPostImageRepository), typeof(PostImageRepository));
             services.AddScoped(typeof(IPostTypeRepository), typeof(PostTypeRepository));
         }

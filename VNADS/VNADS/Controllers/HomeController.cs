@@ -1,4 +1,7 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +14,10 @@ namespace VNADS.Controllers
         public async Task<IActionResult> Index()
         {
             var authResult = await HttpContext.AuthenticateAsync();
-            var a = User;
             var vm = new ProfileViewModel
             {
-                Claims = authResult.Principal.Claims,
-                Name = authResult.Principal.Identity?.Name
+                Claims = authResult?.Principal?.Claims ?? new List<Claim>(),
+                Name = authResult?.Principal?.Identity?.Name ?? String.Empty
             };
 
             return View(vm);

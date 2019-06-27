@@ -130,6 +130,8 @@ namespace Data.Migrations
                     Password = table.Column<string>(maxLength: 50, nullable: true),
                     ConfirmPassword = table.Column<string>(maxLength: 50, nullable: true),
                     DisplayName = table.Column<string>(maxLength: 255, nullable: true),
+                    FirstName = table.Column<string>(maxLength: 255, nullable: true),
+                    LastName = table.Column<string>(maxLength: 255, nullable: true),
                     Email = table.Column<string>(maxLength: 100, nullable: false),
                     NickName = table.Column<string>(maxLength: 50, nullable: true),
                     ThumbnailPhoto = table.Column<byte[]>(nullable: true),
@@ -318,19 +320,19 @@ namespace Data.Migrations
                 columns: new[] { "Id", "CreatedBy", "CreatedDate", "DeletedBy", "DeletedDate", "DisplayName", "Icon", "IsDeleted", "IsDisabled", "ModifiedBy", "ModifiedDate", "Name" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(664), null, null, "English", "famfamfam-flags gb", false, false, null, null, "en" },
-                    { 2, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(681), null, null, "العربية", "famfamfam-flags sa", false, false, null, null, "ar" },
-                    { 3, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(683), null, null, "German", "famfamfam-flags de", false, false, null, null, "de" },
-                    { 4, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(684), null, null, "Italiano", "famfamfam-flags it", false, false, null, null, "it" },
-                    { 5, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(685), null, null, "Français", "famfamfam-flags fr", false, false, null, null, "fr" },
-                    { 6, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(691), null, null, "Português", "famfamfam-flags br", false, false, null, null, "pt-BR" },
-                    { 7, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(692), null, null, "Türkçe", "famfamfam-flags tr", false, false, null, null, "tr" },
-                    { 8, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(693), null, null, "Русский", "famfamfam-flags ru", false, false, null, null, "ru" },
-                    { 9, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(694), null, null, "简体中文", "famfamfam-flags cn", false, false, null, null, "zh-Hans" },
-                    { 10, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(697), null, null, "Español México", "famfamfam-flags mx", false, false, null, null, "es-MX" },
-                    { 11, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(698), null, null, "Nederlands", "famfamfam-flags nl", false, false, null, null, "nl" },
-                    { 12, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(699), null, null, "日本語", "famfamfam-flags jp", false, false, null, null, "ja" },
-                    { 13, 1, new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(700), null, null, "Viet Nam", "famfamfam-flags vn", false, false, null, null, "vn" }
+                    { 1, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2314), null, null, "English", "famfamfam-flags gb", false, false, null, null, "en" },
+                    { 2, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2331), null, null, "العربية", "famfamfam-flags sa", false, false, null, null, "ar" },
+                    { 3, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2333), null, null, "German", "famfamfam-flags de", false, false, null, null, "de" },
+                    { 4, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2334), null, null, "Italiano", "famfamfam-flags it", false, false, null, null, "it" },
+                    { 5, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2335), null, null, "Français", "famfamfam-flags fr", false, false, null, null, "fr" },
+                    { 6, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2341), null, null, "Português", "famfamfam-flags br", false, false, null, null, "pt-BR" },
+                    { 7, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2342), null, null, "Türkçe", "famfamfam-flags tr", false, false, null, null, "tr" },
+                    { 8, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2343), null, null, "Русский", "famfamfam-flags ru", false, false, null, null, "ru" },
+                    { 9, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2344), null, null, "简体中文", "famfamfam-flags cn", false, false, null, null, "zh-Hans" },
+                    { 10, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2382), null, null, "Español México", "famfamfam-flags mx", false, false, null, null, "es-MX" },
+                    { 11, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2384), null, null, "Nederlands", "famfamfam-flags nl", false, false, null, null, "nl" },
+                    { 12, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2385), null, null, "日本語", "famfamfam-flags jp", false, false, null, null, "ja" },
+                    { 13, 1, new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2386), null, null, "Viet Nam", "famfamfam-flags vn", false, false, null, null, "vn" }
                 });
 
             migrationBuilder.InsertData(
@@ -338,9 +340,9 @@ namespace Data.Migrations
                 columns: new[] { "Id", "CreatedBy", "CreatedDate", "DeletedBy", "DeletedDate", "IsDeleted", "ModifiedBy", "ModifiedDate", "Name" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2019, 6, 26, 23, 58, 35, 361, DateTimeKind.Local).AddTicks(8929), null, null, false, null, null, "Administrator" },
-                    { 2, 1, new DateTime(2019, 6, 26, 23, 58, 35, 362, DateTimeKind.Local).AddTicks(6677), null, null, false, null, null, "Poster" },
-                    { 3, 1, new DateTime(2019, 6, 26, 23, 58, 35, 362, DateTimeKind.Local).AddTicks(6687), null, null, false, null, null, "Normal User" }
+                    { 1, 1, new DateTime(2019, 6, 27, 23, 42, 15, 835, DateTimeKind.Local).AddTicks(3895), null, null, false, null, null, "Administrator" },
+                    { 2, 1, new DateTime(2019, 6, 27, 23, 42, 15, 836, DateTimeKind.Local).AddTicks(707), null, null, false, null, null, "Poster" },
+                    { 3, 1, new DateTime(2019, 6, 27, 23, 42, 15, 836, DateTimeKind.Local).AddTicks(717), null, null, false, null, null, "Normal User" }
                 });
 
             migrationBuilder.CreateIndex(

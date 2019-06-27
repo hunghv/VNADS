@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(CoffeeRenoContext))]
-    [Migration("20190626165835_hunghv2")]
+    [Migration("20190627164216_hunghv2")]
     partial class hunghv2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -124,7 +124,7 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(664),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2314),
                             DisplayName = "English",
                             Icon = "famfamfam-flags gb",
                             IsDeleted = false,
@@ -135,7 +135,7 @@ namespace Data.Migrations
                         {
                             Id = 2,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(681),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2331),
                             DisplayName = "العربية",
                             Icon = "famfamfam-flags sa",
                             IsDeleted = false,
@@ -146,7 +146,7 @@ namespace Data.Migrations
                         {
                             Id = 3,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(683),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2333),
                             DisplayName = "German",
                             Icon = "famfamfam-flags de",
                             IsDeleted = false,
@@ -157,7 +157,7 @@ namespace Data.Migrations
                         {
                             Id = 4,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(684),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2334),
                             DisplayName = "Italiano",
                             Icon = "famfamfam-flags it",
                             IsDeleted = false,
@@ -168,7 +168,7 @@ namespace Data.Migrations
                         {
                             Id = 5,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(685),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2335),
                             DisplayName = "Français",
                             Icon = "famfamfam-flags fr",
                             IsDeleted = false,
@@ -179,7 +179,7 @@ namespace Data.Migrations
                         {
                             Id = 6,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(691),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2341),
                             DisplayName = "Português",
                             Icon = "famfamfam-flags br",
                             IsDeleted = false,
@@ -190,7 +190,7 @@ namespace Data.Migrations
                         {
                             Id = 7,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(692),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2342),
                             DisplayName = "Türkçe",
                             Icon = "famfamfam-flags tr",
                             IsDeleted = false,
@@ -201,7 +201,7 @@ namespace Data.Migrations
                         {
                             Id = 8,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(693),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2343),
                             DisplayName = "Русский",
                             Icon = "famfamfam-flags ru",
                             IsDeleted = false,
@@ -212,7 +212,7 @@ namespace Data.Migrations
                         {
                             Id = 9,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(694),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2344),
                             DisplayName = "简体中文",
                             Icon = "famfamfam-flags cn",
                             IsDeleted = false,
@@ -223,7 +223,7 @@ namespace Data.Migrations
                         {
                             Id = 10,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(697),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2382),
                             DisplayName = "Español México",
                             Icon = "famfamfam-flags mx",
                             IsDeleted = false,
@@ -234,7 +234,7 @@ namespace Data.Migrations
                         {
                             Id = 11,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(698),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2384),
                             DisplayName = "Nederlands",
                             Icon = "famfamfam-flags nl",
                             IsDeleted = false,
@@ -245,7 +245,7 @@ namespace Data.Migrations
                         {
                             Id = 12,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(699),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2385),
                             DisplayName = "日本語",
                             Icon = "famfamfam-flags jp",
                             IsDeleted = false,
@@ -256,7 +256,7 @@ namespace Data.Migrations
                         {
                             Id = 13,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 364, DateTimeKind.Local).AddTicks(700),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2386),
                             DisplayName = "Viet Nam",
                             Icon = "famfamfam-flags vn",
                             IsDeleted = false,
@@ -436,7 +436,7 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 361, DateTimeKind.Local).AddTicks(8929),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 835, DateTimeKind.Local).AddTicks(3895),
                             IsDeleted = false,
                             Name = "Administrator"
                         },
@@ -444,7 +444,7 @@ namespace Data.Migrations
                         {
                             Id = 2,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 362, DateTimeKind.Local).AddTicks(6677),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 836, DateTimeKind.Local).AddTicks(707),
                             IsDeleted = false,
                             Name = "Poster"
                         },
@@ -452,7 +452,7 @@ namespace Data.Migrations
                         {
                             Id = 3,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 26, 23, 58, 35, 362, DateTimeKind.Local).AddTicks(6687),
+                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 836, DateTimeKind.Local).AddTicks(717),
                             IsDeleted = false,
                             Name = "Normal User"
                         });
@@ -521,7 +521,13 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(255);
+
                     b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("LastName")
+                        .HasMaxLength(255);
 
                     b.Property<int?>("ModifiedBy");
 
