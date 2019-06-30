@@ -11,12 +11,12 @@ namespace Data.Repository.Implementation
         {
         }
     }
-    public class UserProfileRepository : EntityBaseRepository<UserProfile>, IUserProfileRepository
-    {
-        public UserProfileRepository(CoffeeRenoContext context) : base(context)
-        {
-        }
-    }
+    //public class UserProfileRepository : EntityBaseRepository<UserProfile>, IUserProfileRepository
+    //{
+    //    public UserProfileRepository(CoffeeRenoContext context) : base(context)
+    //    {
+    //    }
+    //}
     public class UserRoleRepository : EntityBaseRepository<UserRole>, IUserRoleRepository
     {
         public UserRoleRepository(CoffeeRenoContext context) : base(context)

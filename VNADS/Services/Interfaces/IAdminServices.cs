@@ -9,11 +9,11 @@ namespace Services.Interfaces
     {
         #region Blog
 
-        IPagedResults<UserProfileResponse> GetBlogs(UserProfileDto request);
+        //IPagedResults<UserProfileResponse> GetBlogs(UserProfileDto request);
 
-        Task<int?> SaveBlog(UserProfileModel request);
+        //Task<int?> SaveBlog(UserProfileModel request);
 
-        bool DeleteCategories(int request);
+        //bool DeleteCategories(int request);
 
         #endregion
     }

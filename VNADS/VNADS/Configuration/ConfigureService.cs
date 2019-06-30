@@ -1,10 +1,12 @@
 ﻿using System;
 using AutoMapper;
 using Data.Context;
+using Data.Entities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -66,6 +68,23 @@ namespace VNADS.Configuration
                 options.UseMySql(configuration.GetConnectionString("DefaultConnection"),
                     mySqlOptionsAction => mySqlOptionsAction.ServerVersion(new Version(), ServerType.MySql)
                 ));
+
+            services.AddDbContext<IdentityDbContext>(options =>
+                options.UseMySql(configuration.GetConnectionString("DefaultConnection"),
+                    mySqlOptionsAction => mySqlOptionsAction.ServerVersion(new Version(), ServerType.MySql)
+                ));
+            services.AddIdentity<UserProfile, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDbContext>()
+                .AddDefaultTokenProviders();
+            //services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>()
+            //    .AddEntityFrameworkStores<CoffeeRenoContext>();
+
+            services.AddCors(o => o.AddPolicy("CORSPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
         }
 
         private static void InitSwagger(IServiceCollection services)

@@ -14,7 +14,8 @@ namespace IoC
         {
             //Context
             services.AddScoped(typeof(CoffeeRenoContext), typeof(CoffeeRenoContext));
-
+            services.AddScoped(typeof(IdentityDbContext), typeof(IdentityDbContext));
+            
             //Repository
             RegRepository(services);
 
@@ -28,7 +29,7 @@ namespace IoC
         private static void RegRepository(IServiceCollection services)
         {
             services.AddScoped(typeof(IUserLoginHistoryRepository), typeof(UserLoginHistoryRepository));
-            services.AddScoped(typeof(IUserProfileRepository), typeof(UserProfileRepository));
+            //services.AddScoped(typeof(IUserProfileRepository), typeof(UserProfileRepository));
             services.AddScoped(typeof(IRoleRepository), typeof(RoleRepository));
             services.AddScoped(typeof(IUserRoleRepository), typeof(UserRoleRepository));
             services.AddScoped(typeof(IAdsFormRepository), typeof(AdsFormRepository));

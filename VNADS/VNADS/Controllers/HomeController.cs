@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using VNADS.Models;
+using VNADS.Models.AccountViewModels;
 
 namespace VNADS.Controllers
 {
     public class HomeController : Controller
     {
+        
         public async Task<IActionResult> Index()
         {
             var authResult = await HttpContext.AuthenticateAsync();

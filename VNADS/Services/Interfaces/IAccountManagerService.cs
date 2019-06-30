@@ -5,6 +5,6 @@ namespace Services.Interfaces
 {
     public interface IAccountManagerService
     {
-        Task<(bool, UserProfile)> ValidateUserCredentialsAsync(string username, string password);
+      //  Task<(bool, UserProfile)> ValidateUserCredentialsAsync(string username, string password);
     }
 }

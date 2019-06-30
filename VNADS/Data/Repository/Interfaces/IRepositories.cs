@@ -8,7 +8,7 @@ namespace Data.Repository.Interfaces
 {
     public interface IUserLoginHistoryRepository : IEntityBaseRepository<UserLoginHistory> { }
     public interface IUserRoleRepository : IEntityBaseRepository<UserRole> { }
-    public interface IUserProfileRepository : IEntityBaseRepository<UserProfile> { }
+    //public interface IUserProfileRepository : IEntityBaseRepository<UserProfile> { }
     public interface IRoleRepository : IEntityBaseRepository<Role> { }
     public interface IImageRepository : IEntityBaseRepository<Image> { }
     public interface IAdsFormRepository : IEntityBaseRepository<AdsForm> { }

@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using Data.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Services.Interfaces;
-using VNADS.Models;
+using VNADS.Models.AccountViewModels;
 
 namespace VNADS.Controllers
 {
@@ -17,44 +19,51 @@ namespace VNADS.Controllers
     {
         private readonly IAccountManagerService _userService;
         private readonly IConfiguration _configuration;
+        private readonly UserManager<UserProfile> _userManager;
+        private readonly SignInManager<UserProfile> _signInManager; 
 
-        public AuthController(IAccountManagerService userService, IConfiguration configuration)
+        public AuthController(IAccountManagerService userService, IConfiguration configuration, UserManager<UserProfile> userManager, SignInManager<UserProfile> signInManager)
         {
             _userService = userService;
             _configuration = configuration;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         [Route("login")]
-        public IActionResult Index(string returnUrl)
+        public async Task<IActionResult> Index(string returnUrl)
         {
-            return View(new LoginViewModel
-            {
-                ReturnUrl = returnUrl
-            });
+            // Clear the existing external cookie to ensure a clean login process
+            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+
+            ViewData["ReturnUrl"] = returnUrl;
+            return View();
         }
 
         [Route("login")]
         [HttpPost]
-        public async Task<IActionResult> Index(LoginViewModel model)
+        public async Task<IActionResult> Index(LoginViewModel model, string returnUrl = null)
         {
+            ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var (isValid, user) = await _userService.ValidateUserCredentialsAsync(model.UserName, model.Password);
-                if (isValid)
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
+                if (result.Succeeded)
                 {
+                    var user = await _userManager.FindByEmailAsync(model.Email);
                     await LoginAsync(user);
-                    if (IsUrlValid(model.ReturnUrl))
-                    {
-                        return Redirect(model.ReturnUrl);
-                    }
-
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToLocal(returnUrl);
                 }
-
-                ModelState.AddModelError("InvalidCredentials", "Invalid credentials.");
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return View(model);
+                }
             }
 
+            // If we got this far, something failed, redisplay form
             return View(model);
+
         }
 
         [Route("signin/{provider}")]
@@ -87,23 +96,73 @@ namespace VNADS.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        #region Private Method
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Register(string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            return View();
+        }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            if (ModelState.IsValid)
+            {
+                var user = new UserProfile
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    DisplayName = model.Email,
+                    TwoFactorEnabled = false,
+                    Active = true,
+                    DateOfBirth = DateTime.Now,
+                };
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return RedirectToLocal(returnUrl);
+                }
+                AddErrors(result);
+            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        #region Private Method
+        private void AddErrors(IdentityResult result)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+        }
+        private IActionResult RedirectToLocal(string returnUrl)
+        {
+            if (Url.IsLocalUrl(returnUrl))
+            {
+                return Redirect(returnUrl);
+            }
+            else
+            {
+                return RedirectToAction(nameof(HomeController.Index), "Home");
+            }
+        }
         private async Task LoginAsync(UserProfile user)
         {
-            var properties = new AuthenticationProperties
-            {
-                //AllowRefresh = false,
-                //IsPersistent = true,
-                //ExpiresUtc = DateTimeOffset.UtcNow.AddSeconds(10)
-            };
+            var properties = new AuthenticationProperties();
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
                 new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.GivenName, user.FirstName),
-                new Claim(ClaimTypes.Surname, user.LastName),
-                new Claim(ClaimTypes.DateOfBirth, user.DateOfBirth.ToString("o"), ClaimValueTypes.DateTime)
+                new Claim(ClaimTypes.GivenName, user.FirstName?? "Teo"),
+                new Claim(ClaimTypes.Surname, user.LastName??"Teo"),
+                new Claim(ClaimTypes.DateOfBirth, user.DateOfBirth.ToString("o")??DateTime.Now.ToString(), ClaimValueTypes.DateTime)
             };
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var principal = new ClaimsPrincipal(identity);

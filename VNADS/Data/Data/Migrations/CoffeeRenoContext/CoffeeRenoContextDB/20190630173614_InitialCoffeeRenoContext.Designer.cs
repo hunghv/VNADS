@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Data.Migrations
+namespace Data.Data.Migrations.CoffeeRenoContext.CoffeeRenoContextDB
 {
-    [DbContext(typeof(CoffeeRenoContext))]
-    [Migration("20190627164216_hunghv2")]
-    partial class hunghv2
+    [DbContext(typeof(Context.CoffeeRenoContext))]
+    [Migration("20190630173614_InitialCoffeeRenoContext")]
+    partial class InitialCoffeeRenoContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -124,7 +124,7 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2314),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2595),
                             DisplayName = "English",
                             Icon = "famfamfam-flags gb",
                             IsDeleted = false,
@@ -135,7 +135,7 @@ namespace Data.Migrations
                         {
                             Id = 2,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2331),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2615),
                             DisplayName = "العربية",
                             Icon = "famfamfam-flags sa",
                             IsDeleted = false,
@@ -146,7 +146,7 @@ namespace Data.Migrations
                         {
                             Id = 3,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2333),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2616),
                             DisplayName = "German",
                             Icon = "famfamfam-flags de",
                             IsDeleted = false,
@@ -157,7 +157,7 @@ namespace Data.Migrations
                         {
                             Id = 4,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2334),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2618),
                             DisplayName = "Italiano",
                             Icon = "famfamfam-flags it",
                             IsDeleted = false,
@@ -168,7 +168,7 @@ namespace Data.Migrations
                         {
                             Id = 5,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2335),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2619),
                             DisplayName = "Français",
                             Icon = "famfamfam-flags fr",
                             IsDeleted = false,
@@ -179,7 +179,7 @@ namespace Data.Migrations
                         {
                             Id = 6,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2341),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2623),
                             DisplayName = "Português",
                             Icon = "famfamfam-flags br",
                             IsDeleted = false,
@@ -190,7 +190,7 @@ namespace Data.Migrations
                         {
                             Id = 7,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2342),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2625),
                             DisplayName = "Türkçe",
                             Icon = "famfamfam-flags tr",
                             IsDeleted = false,
@@ -201,7 +201,7 @@ namespace Data.Migrations
                         {
                             Id = 8,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2343),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2626),
                             DisplayName = "Русский",
                             Icon = "famfamfam-flags ru",
                             IsDeleted = false,
@@ -212,7 +212,7 @@ namespace Data.Migrations
                         {
                             Id = 9,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2344),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2627),
                             DisplayName = "简体中文",
                             Icon = "famfamfam-flags cn",
                             IsDeleted = false,
@@ -223,7 +223,7 @@ namespace Data.Migrations
                         {
                             Id = 10,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2382),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2629),
                             DisplayName = "Español México",
                             Icon = "famfamfam-flags mx",
                             IsDeleted = false,
@@ -234,7 +234,7 @@ namespace Data.Migrations
                         {
                             Id = 11,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2384),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2630),
                             DisplayName = "Nederlands",
                             Icon = "famfamfam-flags nl",
                             IsDeleted = false,
@@ -245,7 +245,7 @@ namespace Data.Migrations
                         {
                             Id = 12,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2385),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2631),
                             DisplayName = "日本語",
                             Icon = "famfamfam-flags jp",
                             IsDeleted = false,
@@ -256,7 +256,7 @@ namespace Data.Migrations
                         {
                             Id = 13,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 837, DateTimeKind.Local).AddTicks(2386),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 252, DateTimeKind.Local).AddTicks(2633),
                             DisplayName = "Viet Nam",
                             Icon = "famfamfam-flags vn",
                             IsDeleted = false,
@@ -332,13 +332,15 @@ namespace Data.Migrations
 
                     b.Property<int>("UserProfileId");
 
+                    b.Property<string>("UserProfileId1");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AdsFormId");
 
                     b.HasIndex("PostTypeId");
 
-                    b.HasIndex("UserProfileId");
+                    b.HasIndex("UserProfileId1");
 
                     b.ToTable("VNADS_Post");
                 });
@@ -436,7 +438,7 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 835, DateTimeKind.Local).AddTicks(3895),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 249, DateTimeKind.Local).AddTicks(7937),
                             IsDeleted = false,
                             Name = "Administrator"
                         },
@@ -444,7 +446,7 @@ namespace Data.Migrations
                         {
                             Id = 2,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 836, DateTimeKind.Local).AddTicks(707),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 250, DateTimeKind.Local).AddTicks(5326),
                             IsDeleted = false,
                             Name = "Poster"
                         },
@@ -452,7 +454,7 @@ namespace Data.Migrations
                         {
                             Id = 3,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2019, 6, 27, 23, 42, 15, 836, DateTimeKind.Local).AddTicks(717),
+                            CreatedDate = new DateTime(2019, 7, 1, 0, 36, 14, 250, DateTimeKind.Local).AddTicks(5338),
                             IsDeleted = false,
                             Name = "Normal User"
                         });
@@ -485,22 +487,25 @@ namespace Data.Migrations
 
                     b.Property<int>("UserId");
 
+                    b.Property<string>("UserId1");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("VNADS_UserLoginHistory");
                 });
 
             modelBuilder.Entity("Data.Entities.UserProfile", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int>("AccessFailedCount");
 
                     b.Property<bool?>("Active");
 
-                    b.Property<string>("ConfirmPassword")
-                        .HasMaxLength(50);
+                    b.Property<string>("ConcurrencyStamp");
 
                     b.Property<int>("CreatedBy");
 
@@ -517,9 +522,9 @@ namespace Data.Migrations
 
                     b.Property<string>("Domain");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Email");
+
+                    b.Property<bool>("EmailConfirmed");
 
                     b.Property<string>("FirstName")
                         .HasMaxLength(255);
@@ -529,26 +534,38 @@ namespace Data.Migrations
                     b.Property<string>("LastName")
                         .HasMaxLength(255);
 
+                    b.Property<bool>("LockoutEnabled");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd");
+
                     b.Property<int?>("ModifiedBy");
 
                     b.Property<DateTime?>("ModifiedDate");
 
-                    b.Property<string>("NickName")
-                        .HasMaxLength(50);
+                    b.Property<string>("NickName");
 
-                    b.Property<string>("Password")
-                        .HasMaxLength(50);
+                    b.Property<string>("NormalizedEmail");
+
+                    b.Property<string>("NormalizedUserName");
+
+                    b.Property<string>("PasswordHash");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.Property<bool>("PhoneNumberConfirmed");
 
                     b.Property<bool?>("ReceiveEmail");
+
+                    b.Property<string>("SecurityStamp");
 
                     b.Property<string>("TelephoneNumber")
                         .HasMaxLength(30);
 
                     b.Property<byte[]>("ThumbnailPhoto");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<bool>("TwoFactorEnabled");
+
+                    b.Property<string>("UserName");
 
                     b.HasKey("Id");
 
@@ -578,13 +595,26 @@ namespace Data.Migrations
 
                     b.Property<int>("UserProfileId");
 
+                    b.Property<string>("UserProfileId1");
+
                     b.HasKey("Id");
 
                     b.HasIndex("RoleId");
 
-                    b.HasIndex("UserProfileId");
+                    b.HasIndex("UserProfileId1");
 
                     b.ToTable("VNADS_UserRole");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId");
+
+                    b.Property<Guid>("RoleId");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.ToTable("IdentityUserRole<Guid>");
                 });
 
             modelBuilder.Entity("Data.Entities.AdsForm", b =>
@@ -609,8 +639,7 @@ namespace Data.Migrations
 
                     b.HasOne("Data.Entities.UserProfile", "UserProfile")
                         .WithMany("Posts")
-                        .HasForeignKey("UserProfileId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UserProfileId1");
                 });
 
             modelBuilder.Entity("Data.Entities.PostImage", b =>
@@ -630,8 +659,7 @@ namespace Data.Migrations
                 {
                     b.HasOne("Data.Entities.UserProfile", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UserId1");
                 });
 
             modelBuilder.Entity("Data.Entities.UserRole", b =>
@@ -643,8 +671,7 @@ namespace Data.Migrations
 
                     b.HasOne("Data.Entities.UserProfile", "UserProfile")
                         .WithMany("UserRoles")
-                        .HasForeignKey("UserProfileId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UserProfileId1");
                 });
 #pragma warning restore 612, 618
         }

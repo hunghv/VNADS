@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace VNADS.Models
+namespace VNADS.Models.AccountViewModels
 {
     public class ProfileViewModel
     {
