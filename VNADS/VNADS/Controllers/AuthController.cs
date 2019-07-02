@@ -98,6 +98,7 @@ namespace VNADS.Controllers
 
         [HttpGet]
         [AllowAnonymous]
+        [Route("register")]
         public IActionResult Register(string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -107,6 +108,7 @@ namespace VNADS.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [Route("register")]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;

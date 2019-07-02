@@ -1,36 +1,88 @@
-﻿@model VNADS.Models.AccountViewModels.RegisterViewModel
+﻿@inject IAuthenticationSchemeProvider SchemeProvider
+@using Microsoft.AspNetCore.Authentication
+@model VNADS.Models.AccountViewModels.RegisterViewModel
 @{
     ViewData["Title"] = "Register";
 }
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<br />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" style="width:350px">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>Coffee Reno Login/Register Form</title>
+</head>
+<body>
+    <br />
+    <div id="logreg-forms">
+        <div class="form-signup">
             <h4>Create a new account.</h4>
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="UserName" style="width:185px; display:inline-block;"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+            <div class="social-login">
+                <div>
+                    @foreach (var provider in await SchemeProvider.GetRequestHandlerSchemesAsync())
+                    {
+                        if (@provider.Name == "Facebook")
+                        {
+                            <a class="btn facebook-btn social-btn" type="button" asp-route-returnUrl="@Context.Request.Query["returnUrl"]"
+                               asp-route-provider="@provider.Name"
+                               asp-action="SignIn">
+                                <span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span>
+                            </a>
+                            <br/>
+                        }
+                        else
+                        {
+                            <a class="btn google-btn social-btn" type="button" asp-route-returnUrl="@Context.Request.Query["returnUrl"]"
+                               asp-route-provider="@provider.Name"
+                               asp-action="SignIn">
+                                <span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span>
+                            </a>
+                            <br/>
+                        }
+                    }
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Email" style="width:185px; display:inline-block;"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" style="width:185px; display:inline-block;"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ConfirmPassword" style="width:185px; display:inline-block;"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button type="submit" class="btn btn-default" style="float:right;">Register</button>
-        </form>
+
+            <p style="text-align: center">OR</p>
+            <form asp-route-returnUrl="@ViewData[" ReturnUrl"]" method="post" style="width: 350px">
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="UserName" style="width: 185px; display: inline-block;"></label>
+                    <input asp-for="UserName" class="form-control" placeholder="Full name" required="" autofocus="" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" style="width: 185px; display: inline-block;"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Email address" required="" autofocus="" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" style="width: 185px; display: inline-block;"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" style="width: 185px; display: inline-block;"></label>
+                    <input asp-for="ConfirmPassword" class="form-control" placeholder="Repeat Password" required autofocus="" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <a href="" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+            </form>
+        </div>
     </div>
-</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="~/js/script.js"></script>
+</body>
+</html>
+
