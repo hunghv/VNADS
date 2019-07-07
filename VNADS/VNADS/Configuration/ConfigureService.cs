@@ -1,13 +1,15 @@
 ﻿using System;
 using AutoMapper;
 using Data.Context;
+
+
+
 using Data.Entities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,19 +26,34 @@ namespace VNADS.Configuration
         {
             InitAutoMapper(services);
             InitSwagger(services);
-            InitMySQL(services, configuration);
-            InitAuth(services);
+            InitAuth(services, configuration);
+            InitMySql(services, configuration);
         }
 
-        private static void InitAuth(IServiceCollection services)
+        private static void InitAuth(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddHttpContextAccessor();
+            //services.AddMemoryCache();
+            //services.AddSingleton<IConfiguration>(configuration);
+            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            //services.AddAuthorization(options =>
+            //{
+            //    options.AddPolicy("ConfirmUser",
+            //        policy => policy.Requirements.Add(new AuthorizationsRequirement(AuthorizationKeyConstants.AUTH_CONFIRM_USER)));
+            //    options.AddPolicy("GetUser",
+            //        policy => policy.Requirements.Add(new AuthorizationsRequirement(AuthorizationKeyConstants.AUTH_GET_USER)));
+            //    options.AddPolicy("RemoveUser",
+            //        policy => policy.Requirements.Add(new AuthorizationsRequirement(AuthorizationKeyConstants.AUTH_DELETE_USER)));
+            //    options.AddPolicy("GetListUser",
+            //        policy => policy.Requirements.Add(new AuthorizationsRequirement(AuthorizationKeyConstants.AUTH_GETLIST_USER)));
+            //});
 
             services.AddAuthentication(options =>
                 {
+                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 })
                 .AddFacebook(options =>
                 {
@@ -48,22 +65,21 @@ namespace VNADS.Configuration
                     options.ClientId = "996326863156-enla0cmr75m9i74p5ubstj2tqklpmh7a.apps.googleusercontent.com";
                     options.ClientSecret = "Yuj_3Lq5KjJhgQ6tZ2UmuU52";
                 })
-                .AddCookie(options =>
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
                 {
                     options.LoginPath = "/auth/login";
                     options.LogoutPath = "/auth/logout";
                 });
         }
 
-        private static void InitMySQL(IServiceCollection services, IConfiguration configuration)
+        private static void InitMySql(IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddAuthentication();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
             services.AddDbContext<CoffeeRenoContext>(options =>
                 options.UseMySql(configuration.GetConnectionString("DefaultConnection"),
                     mySqlOptionsAction => mySqlOptionsAction.ServerVersion(new Version(), ServerType.MySql)
@@ -73,11 +89,11 @@ namespace VNADS.Configuration
                 options.UseMySql(configuration.GetConnectionString("DefaultConnection"),
                     mySqlOptionsAction => mySqlOptionsAction.ServerVersion(new Version(), ServerType.MySql)
                 ));
+
             services.AddIdentity<UserProfile, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityDbContext>()
                 .AddDefaultTokenProviders();
-            //services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>()
-            //    .AddEntityFrameworkStores<CoffeeRenoContext>();
+            //opt => opt.EnableEndpointRouting = true
 
             services.AddCors(o => o.AddPolicy("CORSPolicy", builder =>
             {
@@ -85,6 +101,8 @@ namespace VNADS.Configuration
                     .AllowAnyMethod()
                     .AllowAnyHeader();
             }));
+            services.AddMvc(opt => opt.EnableEndpointRouting = false);
+            //services.AddMvc();
         }
 
         private static void InitSwagger(IServiceCollection services)
@@ -117,12 +135,16 @@ namespace VNADS.Configuration
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseCookiePolicy();
-            app.UseAuthentication();
-            app.UseDefaultFiles();
+            //app.UseHttpsRedirection();
 
+            app.UseStaticFiles();
+
+            app.UseCookiePolicy();
+
+            app.UseAuthentication();
+
+            app.UseDefaultFiles();
+            //{controller}.mvc/{action}/{id} - {controller=Home}/{action=Index}/{id?}
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

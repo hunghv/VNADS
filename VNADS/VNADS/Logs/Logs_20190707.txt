@@ -1,0 +1,1056 @@
+INFO  07-23-2019 11:23:28 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-23-2019 11:23:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-23-2019 11:23:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-23-2019 11:23:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 10.0176ms. 
+INFO  07-23-2019 11:23:29 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [12] - Executing ViewResult, running view Index. 
+INFO  07-23-2019 11:23:29 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [12] - Executed ViewResult - view Index executed in 228.5677ms. 
+INFO  07-23-2019 11:23:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 281.0608ms 
+INFO  07-23-2019 11:23:29 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request finished in 817.325ms 200 text/html; charset=utf-8 
+INFO  07-26-2019 11:26:06 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-26-2019 11:26:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [15] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 10.8535ms. 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executing ViewResult, running view Index. 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executed ViewResult - view Index executed in 154.8406ms. 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 903.8454ms 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 1046.7265ms 200 text/html; charset=utf-8 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request starting HTTP/1.1 GET https://localhost:5001/css/style.css   
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [14] - The file /css/style.css was not modified 
+INFO  07-26-2019 11:26:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request finished in 30.6115ms 304 text/css 
+INFO  07-26-2019 11:26:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request starting HTTP/1.1 GET https://localhost:5001/auth/signin/Facebook   
+INFO  07-26-2019 11:26:09 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Route matched with {action = "SignIn", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SignIn(System.String, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-26-2019 11:26:09 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executing action method VNADS.Controllers.AuthController.SignIn (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:09 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executed action method VNADS.Controllers.AuthController.SignIn (VNADS), returned result Microsoft.AspNetCore.Mvc.ChallengeResult in 3.399ms. 
+INFO  07-26-2019 11:26:09 Microsoft.AspNetCore.Mvc.ChallengeResult [21] - Executing ChallengeResult with authentication schemes (Facebook). 
+INFO  07-26-2019 11:26:09 Microsoft.AspNetCore.Authentication.Facebook.FacebookHandler [21] - AuthenticationScheme: Facebook was challenged. 
+INFO  07-26-2019 11:26:09 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executed action VNADS.Controllers.AuthController.SignIn (VNADS) in 47.3643ms 
+INFO  07-26-2019 11:26:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request finished in 59.7535ms 302  
+INFO  07-26-2019 11:26:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [22] - Request starting HTTP/1.1 GET https://localhost:5001/signin-facebook?code=AQA9Qgw48ZgE7ZpOF5V2GUntHqZJxxR7IM_8Q5vVByx6O33Z2ryATKQuTv4Mz5GD19SV2ZVCO3VOqz_tpG3teGzhKLPjOJKB9B6Nu2FeviUoBNTMMO9f92bRWi-QuM6bavEI4ztOWSEFkYQNjWJTt8xgsxyv6dj4zvoSkMzS--y_P3OvqclhX0dnMwz1hL3xfGuNM3i7I1hl4hVdIbNrf0bY4HVxm6bLRQ1gR_Y3jJ28eIUIwZvH2oUeTkVnr2j-QDdZkauSuOVFDPRaOvl6QVnioM2fZk_m0m7gqhEP1zQPX5kHVts-_qm9Xk7dTtg3Ix_f4klv2GEFP2v1AWFlov8N&state=CfDJ8A-TFY1sfNhInQhE9dKSHpt8vHnMpRf-Zh7QKOmc0TvsyUuB2HtXWm1G1f57T1rnotEG3LYP0gqD9Oum766kmKxBdZy61KyiCvAh1EuXfU3yPJ11Td7YZgcSbZi-rxFT98wod5BzQOpTeOzAx3HHQ9EFrQ7hRs964GOkP2r4yhSJ9PfKHA9uqdTSoZLBS34Wd2y4Oxpaa4V4g6f5dmc6Ay8   
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [11] - AuthenticationScheme: Identity.External signed in. 
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 813.1231ms 302  
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.237ms. 
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executing ViewResult, running view Index. 
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executed ViewResult - view Index executed in 2.9093ms. 
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 11.2166ms 
+INFO  07-26-2019 11:26:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 20.3694ms 200 text/html; charset=utf-8 
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [22] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [22] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [22] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [22] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [22] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.1776ms. 
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [22] - Executing ViewResult, running view Index. 
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [22] - Executed ViewResult - view Index executed in 8.5889ms. 
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [22] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 20.7634ms 
+INFO  07-26-2019 11:26:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [22] - Request finished in 29.6999ms 200 text/html; charset=utf-8 
+INFO  07-26-2019 11:26:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request starting HTTP/1.1 GET https://localhost:5001/auth/signin/Google   
+INFO  07-26-2019 11:26:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Route matched with {action = "SignIn", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SignIn(System.String, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-26-2019 11:26:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executing action method VNADS.Controllers.AuthController.SignIn (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executed action method VNADS.Controllers.AuthController.SignIn (VNADS), returned result Microsoft.AspNetCore.Mvc.ChallengeResult in 0.1247ms. 
+INFO  07-26-2019 11:26:22 Microsoft.AspNetCore.Mvc.ChallengeResult [21] - Executing ChallengeResult with authentication schemes (Google). 
+INFO  07-26-2019 11:26:22 Microsoft.AspNetCore.Authentication.Google.GoogleHandler [21] - AuthenticationScheme: Google was challenged. 
+INFO  07-26-2019 11:26:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executed action VNADS.Controllers.AuthController.SignIn (VNADS) in 14.5163ms 
+INFO  07-26-2019 11:26:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request finished in 22.6847ms 302  
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [10] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 5.3099ms. 
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executing ViewResult, running view Index. 
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executed ViewResult - view Index executed in 6.3493ms. 
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 22.6515ms 
+INFO  07-26-2019 11:26:25 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 31.7461ms 200 text/html; charset=utf-8 
+INFO  07-26-2019 11:26:26 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request starting HTTP/1.1 GET https://localhost:5001/auth/signin/Google   
+INFO  07-26-2019 11:26:26 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Route matched with {action = "SignIn", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SignIn(System.String, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-26-2019 11:26:26 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executing action method VNADS.Controllers.AuthController.SignIn (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:26 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executed action method VNADS.Controllers.AuthController.SignIn (VNADS), returned result Microsoft.AspNetCore.Mvc.ChallengeResult in 0.2236ms. 
+INFO  07-26-2019 11:26:26 Microsoft.AspNetCore.Mvc.ChallengeResult [14] - Executing ChallengeResult with authentication schemes (Google). 
+INFO  07-26-2019 11:26:26 Microsoft.AspNetCore.Authentication.Google.GoogleHandler [14] - AuthenticationScheme: Google was challenged. 
+INFO  07-26-2019 11:26:26 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executed action VNADS.Controllers.AuthController.SignIn (VNADS) in 21.9425ms 
+INFO  07-26-2019 11:26:26 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request finished in 32.1268ms 302  
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [21] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.9029ms. 
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [21] - Executing ViewResult, running view Index. 
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [21] - Executed ViewResult - view Index executed in 7.7749ms. 
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 24.1672ms 
+INFO  07-26-2019 11:26:31 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request finished in 38.2544ms 200 text/html; charset=utf-8 
+INFO  07-26-2019 11:26:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/auth/signin/Facebook   
+INFO  07-26-2019 11:26:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "SignIn", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SignIn(System.String, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-26-2019 11:26:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.AuthController.SignIn (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.AuthController.SignIn (VNADS), returned result Microsoft.AspNetCore.Mvc.ChallengeResult in 0.2118ms. 
+INFO  07-26-2019 11:26:32 Microsoft.AspNetCore.Mvc.ChallengeResult [15] - Executing ChallengeResult with authentication schemes (Facebook). 
+INFO  07-26-2019 11:26:32 Microsoft.AspNetCore.Authentication.Facebook.FacebookHandler [15] - AuthenticationScheme: Facebook was challenged. 
+INFO  07-26-2019 11:26:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.AuthController.SignIn (VNADS) in 14.1257ms 
+INFO  07-26-2019 11:26:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 23.3438ms 302  
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Hosting.Internal.WebHost [22] - Request starting HTTP/1.1 GET https://localhost:5001/signin-facebook?code=AQCnTEZ_7J89JARZ602bT1D8e_ekLXIECmRufnkGHr5DwOOZUsODg56MHiNqaQBcLUrsjuqSZrYQegKvYcpT0J0C0l989wm-ednX4HJsQ6D7zfW0SruGi8pJDWB6Py5VInNeme6hANxNU6C4Nn14dqn01f8fOSq_WTOc9ir1ZFIcw2bpEBtIgud8NazbcOedFpMKQJjVI08synxIUf1GS5kLVrO89yIjt1HKzRP16DOs8D6KkGpbN7pjp2i7vQkNDpySQoHkzfe8xSdIhhgM_9OlAZhBGmKrdXzrdOcmpsqX6veCOzepWHg8vxUrjR05UtwBBgHUhbNCDMqsXah3hD8f&state=CfDJ8A-TFY1sfNhInQhE9dKSHpvhCd-QNzoSDvrnYjFdgEEnNWkTgkRqxlyif-bBqs10Hnwdp7gtJwsBYup9PA0hoGgY2VmF53f2L0nuE2MVzOM34aMiGK5twtjt2PjHKYqSGdis2VF_jxtkkkhrUbuS1RBtieCJM4aqFErfvhbR0-o8ykg2nlkip-rxa1_XSzTMNFuZUx7kuttaS-c0YIqJYdI   
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [11] - AuthenticationScheme: Identity.External signed in. 
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 480.7799ms 302  
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0666ms. 
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executing ViewResult, running view Index. 
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executed ViewResult - view Index executed in 2.309ms. 
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 11.0823ms 
+INFO  07-26-2019 11:26:33 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 18.7574ms 200 text/html; charset=utf-8 
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [22] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [22] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [22] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [22] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [22] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6.032ms. 
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [22] - Executing ViewResult, running view Index. 
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [22] - Executed ViewResult - view Index executed in 8.352ms. 
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [22] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 25.1578ms 
+INFO  07-30-2019 11:30:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [22] - Request finished in 33.0383ms 200 text/html; charset=utf-8 
+INFO  07-31-2019 11:31:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-31-2019 11:31:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-31-2019 11:31:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-31-2019 11:31:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6.9556ms. 
+INFO  07-31-2019 11:31:27 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-31-2019 11:31:27 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 153.9504ms. 
+INFO  07-31-2019 11:31:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 204.5963ms 
+INFO  07-31-2019 11:31:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 499.5154ms 200 text/html; charset=utf-8 
+INFO  07-31-2019 11:31:28 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-31-2019 11:31:28 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-31-2019 11:31:28 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-31-2019 11:31:29 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [7] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-31-2019 11:31:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 9.7472ms. 
+INFO  07-31-2019 11:31:29 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-31-2019 11:31:29 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 133.2997ms. 
+INFO  07-31-2019 11:31:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 474.9923ms 
+INFO  07-31-2019 11:31:29 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 507.197ms 200 text/html; charset=utf-8 
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/auth/signin/Facebook   
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "SignIn", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SignIn(System.String, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.AuthController.SignIn (VNADS) - Validation state: Valid 
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.AuthController.SignIn (VNADS), returned result Microsoft.AspNetCore.Mvc.ChallengeResult in 5.5663ms. 
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Mvc.ChallengeResult [6] - Executing ChallengeResult with authentication schemes (Facebook). 
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Authentication.Facebook.FacebookHandler [6] - AuthenticationScheme: Facebook was challenged. 
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.AuthController.SignIn (VNADS) in 47.1124ms 
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 64.2217ms 302  
+INFO  07-31-2019 11:31:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:5001/signin-facebook?code=AQCUL2QKPAAOZKCnzMOCEQ5X-vdpf7_LQKZc9rjr5hIOakSPx_RcoSYZp5RIUUj3R_b4L-5ONEH71EU2_p9RRdm6A6OAzwJ-6NUKEOO4BATGpYhp2f6EOPgem-62UIM4WSvj8kCuhlQMHs_eA7DgZgHZzXBjDjCKDiXBGg-qtTRNG-VZCU4SybscVoksNvj4Wo7KA4AWVcgJYSszvg-mimNsMJ3dpy-eACSrDQf6Vhpf3kLGFqcG1EXAeQDO3zdeurXmE6TzV8YRbTKHp-PjuQ13cGDVaEcnyYGRFLB8Xxd83e9ZZJZD3D0WK4Ov4b7PBYjq6Sk-v-8aDO36CbOlwHy5&state=CfDJ8A-TFY1sfNhInQhE9dKSHpt1lHrJRikS5UKtde0qcw2Nw4WYdVWoTuOk8HBdXgH-JBddndq87lU_7in53eFDjmB9nlkqqQeZGmDUdNYCVqRRrAcK0iX4UHQ5-xDUj9DAURdTQJDJ4oWWnqy8he_2kjKcJlMbpIcFx-7c4seohjwgoVgRL-C-ZLUPk48kMQMvp2Bkr0wlTpQ82SgcEdd1iwM   
+INFO  07-31-2019 11:31:31 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [5] - AuthenticationScheme: Identity.External signed in. 
+INFO  07-31-2019 11:31:31 Microsoft.AspNetCore.Hosting.Internal.WebHost [5] - Request finished in 792.5666ms 302  
+INFO  07-31-2019 11:31:31 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/auth   
+ERROR 07-31-2019 11:31:31 Microsoft.AspNetCore.Mvc.Internal.ActionSelector [10] - Request matched multiple actions resulting in ambiguity. Matching actions: VNADS.Controllers.AuthController.ExternalLoginCallback (VNADS)
+VNADS.Controllers.AuthController.RedirectToAppHome (VNADS)
+VNADS.Controllers.AuthController.GetAppHomeUrl (VNADS) 
+ERROR 07-31-2019 11:31:31 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [10] - An unhandled exception has occurred while executing the request. Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+VNADS.Controllers.AuthController.ExternalLoginCallback (VNADS)
+VNADS.Controllers.AuthController.RedirectToAppHome (VNADS)
+VNADS.Controllers.AuthController.GetAppHomeUrl (VNADS)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Tree.TreeRouter.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-31-2019 11:31:31 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 166.867ms 500 text/html; charset=utf-8 
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [7] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.4796ms. 
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 7.5919ms. 
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 16.8509ms 
+INFO  07-31-2019 11:31:47 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 24.0603ms 200 text/html; charset=utf-8 
+INFO  07-39-2019 11:39:28 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-39-2019 11:39:28 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-39-2019 11:39:28 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-39-2019 11:39:28 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4.2639ms. 
+INFO  07-39-2019 11:39:28 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [12] - Executing ViewResult, running view Index. 
+INFO  07-39-2019 11:39:28 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [12] - Executed ViewResult - view Index executed in 211.6852ms. 
+INFO  07-39-2019 11:39:28 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 247.6791ms 
+INFO  07-39-2019 11:39:28 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request finished in 607.0059ms 200 text/html; charset=utf-8 
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [11] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 9.9911ms. 
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [11] - Executing ViewResult, running view Index. 
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [11] - Executed ViewResult - view Index executed in 108.4103ms. 
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 411.267ms 
+INFO  07-39-2019 11:39:39 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 441.8483ms 200 text/html; charset=utf-8 
+INFO  07-39-2019 11:39:40 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/auth/signin/Google   
+INFO  07-39-2019 11:39:40 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "SignIn", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SignIn(System.String, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-39-2019 11:39:40 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.AuthController.SignIn (VNADS) - Validation state: Valid 
+INFO  07-39-2019 11:39:40 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.AuthController.SignIn (VNADS), returned result Microsoft.AspNetCore.Mvc.ChallengeResult in 1.2488ms. 
+INFO  07-39-2019 11:39:40 Microsoft.AspNetCore.Mvc.ChallengeResult [6] - Executing ChallengeResult with authentication schemes (Google). 
+INFO  07-39-2019 11:39:40 Microsoft.AspNetCore.Authentication.Google.GoogleHandler [6] - AuthenticationScheme: Google was challenged. 
+INFO  07-39-2019 11:39:40 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.AuthController.SignIn (VNADS) in 30.1626ms 
+INFO  07-39-2019 11:39:40 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 42.4637ms 302  
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [10] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.0642ms. 
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executing ViewResult, running view Index. 
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executed ViewResult - view Index executed in 6.8382ms. 
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 19.6942ms 
+INFO  07-39-2019 11:39:55 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 30.2705ms 200 text/html; charset=utf-8 
+INFO  07-39-2019 11:39:56 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/auth/signin/Facebook   
+INFO  07-39-2019 11:39:56 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "SignIn", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SignIn(System.String, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-39-2019 11:39:56 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.AuthController.SignIn (VNADS) - Validation state: Valid 
+INFO  07-39-2019 11:39:56 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.AuthController.SignIn (VNADS), returned result Microsoft.AspNetCore.Mvc.ChallengeResult in 0.0358ms. 
+INFO  07-39-2019 11:39:56 Microsoft.AspNetCore.Mvc.ChallengeResult [10] - Executing ChallengeResult with authentication schemes (Facebook). 
+INFO  07-39-2019 11:39:56 Microsoft.AspNetCore.Authentication.Facebook.FacebookHandler [10] - AuthenticationScheme: Facebook was challenged. 
+INFO  07-39-2019 11:39:56 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.AuthController.SignIn (VNADS) in 13.0478ms 
+INFO  07-39-2019 11:39:56 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 24.0048ms 302  
+INFO  07-39-2019 11:39:57 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/signin-facebook?code=AQDCrfJzJYtm5FLcqOL4q-UBVBV7PrFfdopCWcvswOxlknQuyC7y2OAkFgUOtoqlniE4iDVwoYbF-WKrKi8Drmhr3bqtZldSdzvhLG7UNO7qj-KD-hJtmcjSNJb0YjUSgvCulytBQYKvnCTXcruGmdBLDBIM7HAdvnHbVhr1ncB3j42m8RxM0J1QpJYPYk4mNvddTSFelHylR3Mtw9EqKUNvbYiOcVqxfrIHhwA7wJcfetRqtWz_FPeotHPzZ-0pe05Ziu67VqyCdmm5H2JLNJ2104Gm-OmHXTRNe9DiEKjbtW06oEZMojU6g07ArysoTrPCVZU-AHNlA5EVjiHLRvNW&state=CfDJ8A-TFY1sfNhInQhE9dKSHpsM803VFCf6sdvkq0lPvcCemhbYWMGX5HxXMB0cZKoI_KSgHEv-jczBX0OUuNRqPuSyKK1LMAieqh57jAwZNlwhQL-JdKC-GXz6KcQT_kS8nMs-hRxVmDwbYlUUCN1d22sD6LKPC5w2rFo13NI5LpIucm20Vv82fBvjp74LLp-FGKtMmhGgu6E3_Ge5lq5yLzk   
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [17] - AuthenticationScheme: Identity.External signed in. 
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Hosting.Internal.WebHost [17] - Request finished in 884.9167ms 302  
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.1197ms. 
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executing ViewResult, running view Index. 
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executed ViewResult - view Index executed in 2.8498ms. 
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 8.8382ms 
+INFO  07-39-2019 11:39:58 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 16.7503ms 200 text/html; charset=utf-8 
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [10] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4.2824ms. 
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executing ViewResult, running view Index. 
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executed ViewResult - view Index executed in 3.4674ms. 
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 19.0907ms 
+INFO  07-40-2019 11:40:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 27.6782ms 200 text/html; charset=utf-8 
+INFO  07-40-2019 11:40:05 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login application/x-www-form-urlencoded 248 
+INFO  07-40-2019 11:40:05 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-40-2019 11:40:05 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-40-2019 11:40:05 Microsoft.EntityFrameworkCore.Infrastructure [6] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-40-2019 11:40:08 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (268ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-40-2019 11:40:09 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (219ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-40-2019 11:40:09 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (219ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-40-2019 11:40:09 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [17] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-40-2019 11:40:10 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (219ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-40-2019 11:40:10 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [17] - AuthenticationScheme: Cookies signed in. 
+INFO  07-40-2019 11:40:10 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 4840.6002ms. 
+INFO  07-40-2019 11:40:10 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 4901.0343ms 
+ERROR 07-40-2019 11:40:10 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [17] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-40-2019 11:40:10 Microsoft.AspNetCore.Hosting.Internal.WebHost [17] - Request finished in 4978.6458ms 500 text/html; charset=utf-8 
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [7] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.5703ms. 
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 5.1214ms. 
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 17.9035ms 
+INFO  07-40-2019 11:40:41 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 28.6526ms 200 text/html; charset=utf-8 
+INFO  07-40-2019 11:40:44 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login application/x-www-form-urlencoded 248 
+INFO  07-40-2019 11:40:44 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-40-2019 11:40:44 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-40-2019 11:40:49 Microsoft.EntityFrameworkCore.Infrastructure [11] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-40-2019 11:40:50 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (245ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-40-2019 11:40:51 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (218ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-40-2019 11:40:51 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (218ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-40-2019 11:40:51 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [17] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-40-2019 11:40:59 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (219ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-42-2019 11:42:30 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [17] - AuthenticationScheme: Cookies signed in. 
+INFO  07-42-2019 11:42:40 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 116371.3455ms. 
+INFO  07-42-2019 11:42:40 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 116381.3462ms 
+ERROR 07-42-2019 11:42:40 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [17] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-42-2019 11:42:40 Microsoft.AspNetCore.Hosting.Internal.WebHost [17] - Request finished in 116397.7444ms 500 text/html; charset=utf-8 
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Hosting.Internal.WebHost [27] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [27] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [27] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [27] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [27] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.6078ms. 
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [27] - Executing ViewResult, running view Index. 
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [27] - Executed ViewResult - view Index executed in 3.5654ms. 
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [27] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 15.771ms 
+INFO  07-43-2019 11:43:19 Microsoft.AspNetCore.Hosting.Internal.WebHost [27] - Request finished in 23.192ms 200 text/html; charset=utf-8 
+INFO  07-43-2019 11:43:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [24] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login application/x-www-form-urlencoded 248 
+INFO  07-43-2019 11:43:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [24] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-43-2019 11:43:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [24] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-43-2019 11:43:23 Microsoft.EntityFrameworkCore.Infrastructure [24] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-43-2019 11:43:24 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (220ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-43-2019 11:43:33 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (234ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-43-2019 11:43:33 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (225ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-43-2019 11:43:33 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [17] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-43-2019 11:43:34 Microsoft.EntityFrameworkCore.Database.Command [17] - Executed DbCommand (239ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-43-2019 11:43:34 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [17] - AuthenticationScheme: Cookies signed in. 
+INFO  07-45-2019 11:45:06 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-45-2019 11:45:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-45-2019 11:45:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-45-2019 11:45:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 5.7133ms. 
+INFO  07-45-2019 11:45:07 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-45-2019 11:45:07 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 167.8036ms. 
+INFO  07-45-2019 11:45:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 208.2585ms 
+INFO  07-45-2019 11:45:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 553.0999ms 200 text/html; charset=utf-8 
+INFO  07-46-2019 11:46:33 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-46-2019 11:46:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-46-2019 11:46:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-46-2019 11:46:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.6882ms. 
+INFO  07-46-2019 11:46:33 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executing ViewResult, running view Index. 
+INFO  07-46-2019 11:46:33 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executed ViewResult - view Index executed in 170.6054ms. 
+INFO  07-46-2019 11:46:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 206.7404ms 
+INFO  07-46-2019 11:46:33 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 512.3892ms 200 text/html; charset=utf-8 
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [9] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 9.9432ms. 
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [9] - Executing ViewResult, running view Index. 
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [9] - Executed ViewResult - view Index executed in 121.469ms. 
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 443.3319ms 
+INFO  07-46-2019 11:46:35 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 473.6118ms 200 text/html; charset=utf-8 
+INFO  07-46-2019 11:46:36 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login application/x-www-form-urlencoded 248 
+INFO  07-46-2019 11:46:36 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-46-2019 11:46:36 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-46-2019 11:46:39 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-46-2019 11:46:41 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (257ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-46-2019 11:46:42 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (216ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-46-2019 11:46:43 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (216ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-46-2019 11:46:43 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-46-2019 11:46:44 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (220ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-46-2019 11:46:44 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Cookies signed in. 
+INFO  07-46-2019 11:46:44 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 7180.537ms. 
+INFO  07-46-2019 11:46:44 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 7235.0654ms 
+ERROR 07-46-2019 11:46:44 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [4] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-46-2019 11:46:44 Microsoft.AspNetCore.Hosting.Internal.WebHost [4] - Request finished in 7318.9053ms 500 text/html; charset=utf-8 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Routing.EndpointMiddleware [9] - Executing endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 20.7025ms. 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [9] - Executing ViewResult, running view Index. 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [9] - Executed ViewResult - view Index executed in 222.1941ms. 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 275.4812ms 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Routing.EndpointMiddleware [9] - Executed endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-47-2019 11:47:04 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 419.7279ms 200 text/html; charset=utf-8 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Routing.EndpointMiddleware [6] - Executing endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [6] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 10.1822ms. 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executing ViewResult, running view Index. 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executed ViewResult - view Index executed in 115.4599ms. 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 412.1871ms 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Routing.EndpointMiddleware [6] - Executed endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-47-2019 11:47:06 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 446.5616ms 200 text/html; charset=utf-8 
+INFO  07-47-2019 11:47:08 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login?returnurl=%2F application/x-www-form-urlencoded 248 
+INFO  07-47-2019 11:47:08 Microsoft.AspNetCore.Routing.EndpointMiddleware [6] - Executing endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-47-2019 11:47:08 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-47-2019 11:47:08 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-47-2019 11:47:12 Microsoft.EntityFrameworkCore.Infrastructure [6] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-47-2019 11:47:14 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (267ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-47-2019 11:47:15 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (219ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-47-2019 11:47:15 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (219ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-47-2019 11:47:15 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-47-2019 11:47:18 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (223ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-47-2019 11:47:20 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Cookies signed in. 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 14225.5799ms. 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.RedirectToActionResult [4] - Executing RedirectResult, redirecting to /. 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 14294.6823ms 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Routing.EndpointMiddleware [4] - Executed endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [4] - Request finished in 14331.4531ms 302  
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Routing.EndpointMiddleware [14] - Executing endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 10.3185ms. 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [14] - Executing ViewResult, running view Index. 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [14] - Executed ViewResult - view Index executed in 4.4015ms. 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 22.3734ms 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Routing.EndpointMiddleware [14] - Executed endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-47-2019 11:47:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request finished in 78.7967ms 200 text/html; charset=utf-8 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Routing.EndpointMiddleware [7] - Executing endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [7] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4.0961ms. 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 15.9797ms. 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 32.8665ms 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Routing.EndpointMiddleware [7] - Executed endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-47-2019 11:47:53 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 50.9401ms 200 text/html; charset=utf-8 
+INFO  07-47-2019 11:47:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login?returnurl=%2F application/x-www-form-urlencoded 248 
+INFO  07-47-2019 11:47:54 Microsoft.AspNetCore.Routing.EndpointMiddleware [7] - Executing endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-47-2019 11:47:54 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-47-2019 11:47:54 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-48-2019 11:48:00 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-48-2019 11:48:01 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (221ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-48-2019 11:48:04 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (219ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-48-2019 11:48:04 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (223ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-48-2019 11:48:04 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-48-2019 11:48:05 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (224ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Cookies signed in. 
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 10813.3105ms. 
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Mvc.RedirectToActionResult [4] - Executing RedirectResult, redirecting to /. 
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 10823.4456ms 
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Routing.EndpointMiddleware [4] - Executed endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Hosting.Internal.WebHost [4] - Request finished in 10835.9564ms 302  
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Routing.EndpointMiddleware [15] - Executing endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-48-2019 11:48:05 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-49-2019 11:49:06 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-49-2019 11:49:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-49-2019 11:49:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-49-2019 11:49:11 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4635.3193ms. 
+INFO  07-49-2019 11:49:12 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-49-2019 11:49:12 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 150.3637ms. 
+INFO  07-49-2019 11:49:12 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 4828.7548ms 
+INFO  07-49-2019 11:49:12 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 5580.3308ms 200 text/html; charset=utf-8 
+INFO  07-49-2019 11:49:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2F   
+INFO  07-49-2019 11:49:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-49-2019 11:49:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-49-2019 11:49:23 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [15] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-49-2019 11:49:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 13.81ms. 
+INFO  07-49-2019 11:49:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 45.4806ms 
+ERROR 07-49-2019 11:49:23 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [15] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-49-2019 11:49:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 153.2631ms 500 text/html; charset=utf-8 
+INFO  07-42-2019 17:42:45 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-42-2019 17:42:46 Microsoft.EntityFrameworkCore.Infrastructure [9] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-42-2019 17:42:48 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (257ms) [Parameters=[@__get_Item_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`Active`, `e`.`ConcurrencyStamp`, `e`.`CreatedBy`, `e`.`CreatedDate`, `e`.`DateOfBirth`, `e`.`DeletedBy`, `e`.`DeletedDate`, `e`.`DisplayName`, `e`.`Domain`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`FirstName`, `e`.`IsDeleted`, `e`.`LastName`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`ModifiedBy`, `e`.`ModifiedDate`, `e`.`NickName`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`ReceiveEmail`, `e`.`SecurityStamp`, `e`.`TelephoneNumber`, `e`.`ThumbnailPhoto`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1 
+INFO  07-42-2019 17:42:49 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (218ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-42-2019 17:42:50 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (218ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-42-2019 17:42:50 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-42-2019 17:42:50 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3621.1806ms. 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [4] - Executing ViewResult, running view Index. 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [4] - Executed ViewResult - view Index executed in 159.3856ms. 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 3811.3597ms 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery/dist/jquery.js   
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:5001/css/site.css   
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0   
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [20] - Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js   
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [4] - Request finished in 8821.3697ms 200 text/html; charset=utf-8 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [4] - Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.css   
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [6] - The file /js/site.js was not modified 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [4] - The file /lib/bootstrap/dist/css/bootstrap.css was not modified 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [9] - The file /lib/jquery/dist/jquery.js was not modified 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [11] - The file /css/site.css was not modified 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [20] - The file /lib/bootstrap/dist/js/bootstrap.bundle.js was not modified 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 46.7496ms 304 application/javascript 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [4] - Request finished in 29.4982ms 304 text/css 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 51.86ms 304 application/javascript 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 52.8837ms 304 text/css 
+INFO  07-42-2019 17:42:54 Microsoft.AspNetCore.Hosting.Internal.WebHost [20] - Request finished in 46.7555ms 304 application/javascript 
+INFO  07-42-2019 17:42:57 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2F   
+INFO  07-42-2019 17:42:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-42-2019 17:42:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-42-2019 17:42:57 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [6] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-42-2019 17:42:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 8.1904ms. 
+INFO  07-42-2019 17:42:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 34.6716ms 
+ERROR 07-42-2019 17:42:57 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [6] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-42-2019 17:42:58 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 137.3497ms 500 text/html; charset=utf-8 
+INFO  07-45-2019 17:45:47 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-45-2019 17:45:47 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-45-2019 17:45:47 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-45-2019 17:45:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 7207.8962ms. 
+INFO  07-45-2019 17:45:55 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-45-2019 17:45:55 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 151.6355ms. 
+INFO  07-45-2019 17:45:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 7391.8788ms 
+INFO  07-45-2019 17:45:55 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 8079.8798ms 200 text/html; charset=utf-8 
+INFO  07-45-2019 17:45:57 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2F   
+INFO  07-45-2019 17:45:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-45-2019 17:45:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-45-2019 17:45:57 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [15] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-45-2019 17:45:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 9.9387ms. 
+INFO  07-45-2019 17:45:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 37.5895ms 
+ERROR 07-45-2019 17:45:58 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [15] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-45-2019 17:45:58 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 153.1046ms 500 text/html; charset=utf-8 
+INFO  07-47-2019 17:47:11 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-47-2019 17:47:12 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-47-2019 17:47:12 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-47-2019 17:47:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4156.5602ms. 
+INFO  07-47-2019 17:47:16 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executing ViewResult, running view Index. 
+INFO  07-47-2019 17:47:16 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executed ViewResult - view Index executed in 149.9366ms. 
+INFO  07-47-2019 17:47:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 4344.1621ms 
+INFO  07-47-2019 17:47:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 5060.6647ms 200 text/html; charset=utf-8 
+INFO  07-47-2019 17:47:18 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2F   
+INFO  07-47-2019 17:47:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-47-2019 17:47:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-47-2019 17:47:18 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [15] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-47-2019 17:47:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 7.6112ms. 
+INFO  07-47-2019 17:47:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 39.7648ms 
+ERROR 07-47-2019 17:47:18 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [15] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-47-2019 17:47:18 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 150.4764ms 500 text/html; charset=utf-8 
+INFO  07-42-2019 22:42:47 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-42-2019 22:42:48 Microsoft.EntityFrameworkCore.Infrastructure [6] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-42-2019 22:42:50 Microsoft.EntityFrameworkCore.Database.Command [5] - Executed DbCommand (262ms) [Parameters=[@__get_Item_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`Active`, `e`.`ConcurrencyStamp`, `e`.`CreatedBy`, `e`.`CreatedDate`, `e`.`DateOfBirth`, `e`.`DeletedBy`, `e`.`DeletedDate`, `e`.`DisplayName`, `e`.`Domain`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`FirstName`, `e`.`IsDeleted`, `e`.`LastName`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`ModifiedBy`, `e`.`ModifiedDate`, `e`.`NickName`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`ReceiveEmail`, `e`.`SecurityStamp`, `e`.`TelephoneNumber`, `e`.`ThumbnailPhoto`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1 
+INFO  07-42-2019 22:42:51 Microsoft.EntityFrameworkCore.Database.Command [5] - Executed DbCommand (267ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-42-2019 22:42:52 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (233ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-42-2019 22:42:52 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-42-2019 22:42:52 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-42-2019 22:42:56 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4134.2279ms. 
+INFO  07-42-2019 22:42:56 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [4] - Executing ViewResult, running view Index. 
+INFO  07-42-2019 22:42:56 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [4] - Executed ViewResult - view Index executed in 169.2598ms. 
+INFO  07-42-2019 22:42:56 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 4339.6397ms 
+INFO  07-42-2019 22:42:56 Microsoft.AspNetCore.Hosting.Internal.WebHost [4] - Request finished in 9324.9996ms 200 text/html; charset=utf-8 
+INFO  07-42-2019 22:42:59 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2F   
+INFO  07-42-2019 22:42:59 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-42-2019 22:42:59 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-42-2019 22:42:59 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [6] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-42-2019 22:42:59 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 8.3737ms. 
+INFO  07-42-2019 22:42:59 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 38.1105ms 
+ERROR 07-42-2019 22:42:59 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [6] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-42-2019 22:42:59 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 131.1634ms 500 text/html; charset=utf-8 
+INFO  07-43-2019 22:43:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-43-2019 22:43:15 Microsoft.AspNetCore.Routing.EndpointMiddleware [11] - Executing endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-43-2019 22:43:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-43-2019 22:43:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-43-2019 22:43:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3239.9707ms. 
+INFO  07-43-2019 22:43:18 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [11] - Executing ViewResult, running view Index. 
+INFO  07-43-2019 22:43:18 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [11] - Executed ViewResult - view Index executed in 175.7478ms. 
+INFO  07-43-2019 22:43:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 3450.8951ms 
+INFO  07-43-2019 22:43:18 Microsoft.AspNetCore.Routing.EndpointMiddleware [11] - Executed endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-43-2019 22:43:18 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 3569.6488ms 200 text/html; charset=utf-8 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Routing.EndpointMiddleware [10] - Executing endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [10] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 11.299ms. 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executing ViewResult, running view Index. 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executed ViewResult - view Index executed in 112.0222ms. 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 142.5798ms 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Routing.EndpointMiddleware [10] - Executed endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 181.7796ms 200 text/html; charset=utf-8 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/css/style.css   
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [10] - The file /css/style.css was not modified 
+INFO  07-43-2019 22:43:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 63.1271ms 304 text/css 
+INFO  07-43-2019 22:43:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login?returnurl=%2F application/x-www-form-urlencoded 248 
+INFO  07-43-2019 22:43:23 Microsoft.AspNetCore.Routing.EndpointMiddleware [12] - Executing endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-43-2019 22:43:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-43-2019 22:43:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-43-2019 22:43:23 Microsoft.EntityFrameworkCore.Infrastructure [12] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-43-2019 22:43:25 Microsoft.EntityFrameworkCore.Database.Command [5] - Executed DbCommand (258ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-43-2019 22:43:26 Microsoft.EntityFrameworkCore.Database.Command [5] - Executed DbCommand (217ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-43-2019 22:43:27 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (217ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-43-2019 22:43:27 Microsoft.EntityFrameworkCore.Database.Command [13] - Executed DbCommand (226ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [13] - AuthenticationScheme: Cookies signed in. 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [13] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 4607.9343ms. 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Mvc.RedirectToActionResult [13] - Executing RedirectResult, redirecting to /. 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [13] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 4662.9303ms 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Routing.EndpointMiddleware [13] - Executed endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [13] - Request finished in 4691.1639ms 302  
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Routing.EndpointMiddleware [11] - Executing endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-43-2019 22:43:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-43-2019 22:43:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3127.4349ms. 
+INFO  07-43-2019 22:43:31 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [11] - Executing ViewResult, running view Index. 
+INFO  07-43-2019 22:43:31 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [11] - Executed ViewResult - view Index executed in 7.78ms. 
+INFO  07-43-2019 22:43:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 3148.946ms 
+INFO  07-43-2019 22:43:31 Microsoft.AspNetCore.Routing.EndpointMiddleware [11] - Executed endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  07-43-2019 22:43:31 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 3169.7725ms 200 text/html; charset=utf-8 
+INFO  07-46-2019 22:46:18 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-46-2019 22:46:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-46-2019 22:46:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-46-2019 22:46:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2960.2293ms. 
+INFO  07-46-2019 22:46:21 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executing ViewResult, running view Index. 
+INFO  07-46-2019 22:46:22 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executed ViewResult - view Index executed in 135.909ms. 
+INFO  07-46-2019 22:46:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 3133.2677ms 
+INFO  07-46-2019 22:46:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 3761.7358ms 200 text/html; charset=utf-8 
+INFO  07-46-2019 22:46:24 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2F   
+INFO  07-46-2019 22:46:24 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-46-2019 22:46:24 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-46-2019 22:46:24 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [15] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-46-2019 22:46:24 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 8.3345ms. 
+INFO  07-46-2019 22:46:24 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 35.9926ms 
+ERROR 07-46-2019 22:46:24 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [15] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-46-2019 22:46:24 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 131.5015ms 500 text/html; charset=utf-8 
+INFO  07-50-2019 22:50:17 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-50-2019 22:50:17 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-50-2019 22:50:17 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-50-2019 22:50:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6266.2639ms. 
+INFO  07-50-2019 22:50:23 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [9] - Executing ViewResult, running view Index. 
+INFO  07-50-2019 22:50:24 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [9] - Executed ViewResult - view Index executed in 153.8236ms. 
+INFO  07-50-2019 22:50:24 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 6454.2878ms 
+INFO  07-50-2019 22:50:24 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 6707.0916ms 200 text/html; charset=utf-8 
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [14] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 13.7548ms. 
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [14] - Executing ViewResult, running view Index. 
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [14] - Executed ViewResult - view Index executed in 125.1227ms. 
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 166.4901ms 
+INFO  07-50-2019 22:50:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request finished in 201.391ms 200 text/html; charset=utf-8 
+INFO  07-50-2019 22:50:34 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login?returnurl=%2F application/x-www-form-urlencoded 248 
+INFO  07-50-2019 22:50:34 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-50-2019 22:50:34 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [14] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-50-2019 22:50:34 Microsoft.EntityFrameworkCore.Infrastructure [14] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-50-2019 22:50:36 Microsoft.EntityFrameworkCore.Database.Command [13] - Executed DbCommand (259ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-50-2019 22:50:37 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (226ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-50-2019 22:50:38 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (219ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-50-2019 22:50:38 Microsoft.EntityFrameworkCore.Database.Command [4] - Executed DbCommand (221ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [4] - AuthenticationScheme: Cookies signed in. 
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 4832.8245ms. 
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Mvc.RedirectToActionResult [4] - Executing RedirectResult, redirecting to /. 
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [4] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 4890.1619ms 
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Hosting.Internal.WebHost [4] - Request finished in 4913.754ms 302  
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-50-2019 22:50:38 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-50-2019 22:50:43 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4201.0035ms. 
+INFO  07-50-2019 22:50:43 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executing ViewResult, running view Index. 
+INFO  07-50-2019 22:50:43 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executed ViewResult - view Index executed in 4.8016ms. 
+INFO  07-50-2019 22:50:43 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 4215.1704ms 
+INFO  07-50-2019 22:50:43 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 4230.0601ms 200 text/html; charset=utf-8 
+INFO  07-51-2019 22:51:11 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-51-2019 22:51:11 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-51-2019 22:51:11 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-51-2019 22:51:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3362.3092ms. 
+INFO  07-51-2019 22:51:15 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executing ViewResult, running view Index. 
+INFO  07-51-2019 22:51:15 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executed ViewResult - view Index executed in 151.8724ms. 
+INFO  07-51-2019 22:51:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 3554.6629ms 
+INFO  07-51-2019 22:51:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 4205.6732ms 200 text/html; charset=utf-8 
+INFO  07-52-2019 22:52:06 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-52-2019 22:52:06 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 610.8423ms 404  
+INFO  07-52-2019 22:52:11 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/home   
+INFO  07-52-2019 22:52:11 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-52-2019 22:52:11 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-52-2019 22:52:14 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3652.9246ms. 
+INFO  07-52-2019 22:52:14 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executing ViewResult, running view Index. 
+INFO  07-52-2019 22:52:15 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executed ViewResult - view Index executed in 141.6979ms. 
+INFO  07-52-2019 22:52:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 3828.4798ms 
+INFO  07-52-2019 22:52:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 3871.6373ms 200 text/html; charset=utf-8 
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/auth/login   
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [15] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 11.569ms. 
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executing ViewResult, running view Index. 
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executed ViewResult - view Index executed in 110.0911ms. 
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 141.3988ms 
+INFO  07-52-2019 22:52:17 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 170.8882ms 200 text/html; charset=utf-8 
+INFO  07-52-2019 22:52:18 Microsoft.AspNetCore.Hosting.Internal.WebHost [16] - Request starting HTTP/1.1 POST https://localhost:5001/auth/login?returnurl=%2Fhome application/x-www-form-urlencoded 248 
+INFO  07-52-2019 22:52:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [16] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(VNADS.Models.AccountViewModels.LoginViewModel, System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-52-2019 22:52:18 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [16] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  07-52-2019 22:52:18 Microsoft.EntityFrameworkCore.Infrastructure [16] - Entity Framework Core 2.2.4-servicing-10062 initialized 'IdentityDbContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  07-52-2019 22:52:20 Microsoft.EntityFrameworkCore.Database.Command [13] - Executed DbCommand (261ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1 
+INFO  07-52-2019 22:52:21 Microsoft.EntityFrameworkCore.Database.Command [13] - Executed DbCommand (230ms) [Parameters=[@__user_Id_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0 
+INFO  07-52-2019 22:52:22 Microsoft.EntityFrameworkCore.Database.Command [13] - Executed DbCommand (217ms) [Parameters=[@__userId_0='?' (Size = 95)], CommandType='Text', CommandTimeout='30']
+SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0 
+INFO  07-52-2019 22:52:22 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [13] - AuthenticationScheme: Identity.Application signed in. 
+INFO  07-52-2019 22:52:23 Microsoft.EntityFrameworkCore.Database.Command [13] - Executed DbCommand (261ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`Active`, `u`.`ConcurrencyStamp`, `u`.`CreatedBy`, `u`.`CreatedDate`, `u`.`DateOfBirth`, `u`.`DeletedBy`, `u`.`DeletedDate`, `u`.`DisplayName`, `u`.`Domain`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`FirstName`, `u`.`IsDeleted`, `u`.`LastName`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`ModifiedBy`, `u`.`ModifiedDate`, `u`.`NickName`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`ReceiveEmail`, `u`.`SecurityStamp`, `u`.`TelephoneNumber`, `u`.`ThumbnailPhoto`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedEmail` = @__normalizedEmail_0
+LIMIT 1 
+INFO  07-52-2019 22:52:23 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [13] - AuthenticationScheme: Cookies signed in. 
+INFO  07-52-2019 22:52:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [13] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 4755.8307ms. 
+INFO  07-52-2019 22:52:23 Microsoft.AspNetCore.Mvc.RedirectToActionResult [13] - Executing RedirectResult, redirecting to /home. 
+INFO  07-52-2019 22:52:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [13] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 4807.6631ms 
+INFO  07-52-2019 22:52:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [13] - Request finished in 4829.9596ms 302  
+INFO  07-52-2019 22:52:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/home   
+INFO  07-52-2019 22:52:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-52-2019 22:52:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-52-2019 22:52:26 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2959.0109ms. 
+INFO  07-52-2019 22:52:26 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-52-2019 22:52:26 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 5.8673ms. 
+INFO  07-52-2019 22:52:26 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 2972.2561ms 
+INFO  07-52-2019 22:52:26 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 2981.3535ms 200 text/html; charset=utf-8 
+INFO  07-52-2019 22:52:44 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-52-2019 22:52:45 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-52-2019 22:52:45 Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [7] - Authorization was successful. 
+INFO  07-52-2019 22:52:45 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-52-2019 22:52:45 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6.9085ms. 
+INFO  07-52-2019 22:52:45 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executing ViewResult, running view Index. 
+INFO  07-52-2019 22:52:45 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [7] - Executed ViewResult - view Index executed in 174.5371ms. 
+INFO  07-52-2019 22:52:45 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 237.1733ms 
+INFO  07-52-2019 22:52:45 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 951.2311ms 200 text/html; charset=utf-8 
+INFO  07-52-2019 22:52:57 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2F   
+INFO  07-52-2019 22:52:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-52-2019 22:52:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-52-2019 22:52:57 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [11] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-52-2019 22:52:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 11.3493ms. 
+INFO  07-52-2019 22:52:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 37.5599ms 
+ERROR 07-52-2019 22:52:57 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [11] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-52-2019 22:52:57 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 126.1461ms 500 text/html; charset=utf-8 
+INFO  07-57-2019 22:57:37 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-57-2019 22:57:38 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request finished in 704.6271ms 404  
+INFO  07-57-2019 22:57:44 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request starting HTTP/1.1 GET https://localhost:5001/home   
+INFO  07-57-2019 22:57:44 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request finished in 17.3945ms 404  
+INFO  07-57-2019 22:57:51 Microsoft.AspNetCore.Hosting.Internal.WebHost [13] - Request starting HTTP/1.1 GET https://localhost:5001/home/index   
+INFO  07-57-2019 22:57:51 Microsoft.AspNetCore.Hosting.Internal.WebHost [13] - Request finished in 2.7724ms 404  
+INFO  07-57-2019 22:57:55 Microsoft.AspNetCore.Hosting.Internal.WebHost [13] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-57-2019 22:57:55 Microsoft.AspNetCore.Hosting.Internal.WebHost [13] - Request finished in 3.6178ms 404  
+INFO  07-58-2019 22:58:19 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-58-2019 22:58:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 494.493ms 404  
+INFO  07-58-2019 22:58:25 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:5001/home   
+INFO  07-58-2019 22:58:25 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 10.5884ms 404  
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://localhost:5001/home/index   
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [15] - Authorization was successful. 
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.8162ms. 
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executing ViewResult, running view Index. 
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [15] - Executed ViewResult - view Index executed in 126.0576ms. 
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 168.2857ms 
+INFO  07-58-2019 22:58:29 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 219.2171ms 200 text/html; charset=utf-8 
+INFO  07-58-2019 22:58:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2Fhome%2Findex   
+INFO  07-58-2019 22:58:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-58-2019 22:58:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-58-2019 22:58:32 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [11] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-58-2019 22:58:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 9.3772ms. 
+INFO  07-58-2019 22:58:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [11] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 34.9359ms 
+ERROR 07-58-2019 22:58:32 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [11] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-58-2019 22:58:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 132.1383ms 500 text/html; charset=utf-8 
+INFO  07-01-2019 23:01:24 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:5001/   
+INFO  07-01-2019 23:01:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  07-01-2019 23:01:25 Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [10] - Authorization was successful. 
+INFO  07-01-2019 23:01:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  07-01-2019 23:01:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 8.998ms. 
+INFO  07-01-2019 23:01:25 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executing ViewResult, running view Index. 
+INFO  07-01-2019 23:01:25 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [10] - Executed ViewResult - view Index executed in 387.3321ms. 
+INFO  07-01-2019 23:01:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 506.7268ms 
+INFO  07-01-2019 23:01:26 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 1374.141ms 200 text/html; charset=utf-8 
+INFO  07-01-2019 23:01:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET https://localhost:5001/auth/logout?returnUrl=%2F   
+INFO  07-01-2019 23:01:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  07-01-2019 23:01:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executing action method VNADS.Controllers.AuthController.Logout (VNADS) - Validation state: Valid 
+INFO  07-01-2019 23:01:27 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [9] - AuthenticationScheme: Identity.External signed out. 
+INFO  07-01-2019 23:01:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action method VNADS.Controllers.AuthController.Logout (VNADS), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 8.672ms. 
+INFO  07-01-2019 23:01:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action VNADS.Controllers.AuthController.Logout (VNADS) in 36.9335ms 
+ERROR 07-01-2019 23:01:27 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [9] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.RedirectToActionResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  07-01-2019 23:01:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 127.1315ms 500 text/html; charset=utf-8 

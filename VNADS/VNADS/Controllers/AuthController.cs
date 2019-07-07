@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Data.Entities;
+using log4net.Core;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -20,7 +21,7 @@ namespace VNADS.Controllers
         private readonly IAccountManagerService _userService;
         private readonly IConfiguration _configuration;
         private readonly UserManager<UserProfile> _userManager;
-        private readonly SignInManager<UserProfile> _signInManager; 
+        private readonly SignInManager<UserProfile> _signInManager;
 
         public AuthController(IAccountManagerService userService, IConfiguration configuration, UserManager<UserProfile> userManager, SignInManager<UserProfile> signInManager)
         {
@@ -36,7 +37,7 @@ namespace VNADS.Controllers
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
-            ViewData["ReturnUrl"] = returnUrl;
+            ViewData["ReturnUrl"] = NormalizeReturnUrl(returnUrl);
             return View();
         }
 
@@ -70,17 +71,53 @@ namespace VNADS.Controllers
         public IActionResult SignIn(string provider, string returnUrl = null) =>
             Challenge(new AuthenticationProperties { RedirectUri = returnUrl ?? "/" }, provider);
 
+
+        public virtual async Task<ActionResult> ExternalLoginCallback(string returnUrl, string remoteError = null)
+        {
+            returnUrl = NormalizeReturnUrl(returnUrl);
+
+            //if (remoteError != null)
+            //{
+            //    _logger.Error("Remote Error in ExternalLoginCallback: " + remoteError);
+            //    throw new UserFriendlyException(L("CouldNotCompleteLoginOperation"));
+            //}
+
+            //var externalLoginInfo = await _signInManager.GetExternalLoginInfoAsync();
+            //if (externalLoginInfo == null)
+            //{
+            //    _logger.Warn("Could not get information from external login.");
+            //    return RedirectToAction(nameof(Login));
+            //}
+
+            //await _signInManager.SignOutAsync();
+
+            //var tenancyName = GetTenancyNameOrNull();
+
+            //var loginResult = await _logInManager.LoginAsync(externalLoginInfo, tenancyName);
+
+            //switch (loginResult.Result)
+            //{
+            //    case AbpLoginResultType.Success:
+            //        await _signInManager.SignInAsync(loginResult.Identity, false);
+            //        return Redirect(returnUrl);
+            //    case AbpLoginResultType.UnknownExternalLogin:
+            //        return await RegisterForExternalLogin(externalLoginInfo);
+            //    default:
+            //        throw _abpLoginResultTypeHelper.CreateExceptionForFailedLoginAttempt(
+            //            loginResult.Result,
+            //            externalLoginInfo.Principal.FindFirstValue(ClaimTypes.Email) ?? externalLoginInfo.ProviderKey,
+            //            tenancyName
+            //        );
+            //}
+
+            return Redirect(returnUrl);
+        }
+
         [Route("logout")]
         public async Task<IActionResult> Logout(string returnUrl)
         {
-            ViewBag.ReturnUrl = returnUrl;
-
-            if (!_configuration.GetValue<bool>("Account:ShowLogoutPrompt"))
-            {
-                return await Logout();
-            }
-
-            return View();
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -93,7 +130,7 @@ namespace VNADS.Controllers
                 await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home",new { version = "1.0" });
         }
 
         [HttpGet]
@@ -101,7 +138,7 @@ namespace VNADS.Controllers
         [Route("register")]
         public IActionResult Register(string returnUrl = null)
         {
-            ViewData["ReturnUrl"] = returnUrl;
+            ViewData["ReturnUrl"] = NormalizeReturnUrl(returnUrl);
             return View();
         }
 
@@ -111,7 +148,7 @@ namespace VNADS.Controllers
         [Route("register")]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
-            ViewData["ReturnUrl"] = returnUrl;
+            ViewData["ReturnUrl"] = NormalizeReturnUrl(returnUrl);
             if (ModelState.IsValid)
             {
                 var user = new UserProfile
@@ -126,8 +163,8 @@ namespace VNADS.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToLocal(returnUrl);
+                    await _signInManager.SignInAsync(user, isPersistent: true);
+                    return RedirectToLocal(NormalizeReturnUrl(returnUrl));
                 }
                 AddErrors(result);
             }
@@ -148,16 +185,19 @@ namespace VNADS.Controllers
         {
             if (Url.IsLocalUrl(returnUrl))
             {
-                return Redirect(returnUrl);
+                return Redirect(NormalizeReturnUrl(returnUrl));
             }
-            else
-            {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
-            }
+            return RedirectToAction("Index", "Home");
         }
         private async Task LoginAsync(UserProfile user)
         {
-            var properties = new AuthenticationProperties();
+            var authProperties = new AuthenticationProperties
+            {
+                AllowRefresh = true,
+                ExpiresUtc = DateTimeOffset.Now.AddDays(1),
+                IsPersistent = true,
+            };
+
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
@@ -166,9 +206,15 @@ namespace VNADS.Controllers
                 new Claim(ClaimTypes.Surname, user.LastName??"Teo"),
                 new Claim(ClaimTypes.DateOfBirth, user.DateOfBirth.ToString("o")??DateTime.Now.ToString(), ClaimValueTypes.DateTime)
             };
-            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var principal = new ClaimsPrincipal(identity);
-            await HttpContext.SignInAsync(principal, properties);
+            var userIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            //userIdentity.AddClaims(claims);
+
+            ClaimsPrincipal userPrincipal = new ClaimsPrincipal(userIdentity);
+
+            // await _signInManager.SignInAsync(user, isPersistent: false);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal, authProperties);
         }
 
         private static bool IsUrlValid(string returnUrl)
@@ -177,6 +223,34 @@ namespace VNADS.Controllers
                    && Uri.IsWellFormedUriString(returnUrl, UriKind.Relative);
         }
 
+        public ActionResult RedirectToAppHome()
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+        public string GetAppHomeUrl()
+        {
+            return Url.Action("Index", "Home");
+        }
+        private string NormalizeReturnUrl(string returnUrl, Func<string> defaultValueBuilder = null)
+        {
+            if (defaultValueBuilder == null)
+            {
+                defaultValueBuilder = GetAppHomeUrl;
+            }
+
+            if (string.IsNullOrEmpty(returnUrl))
+            {
+                return defaultValueBuilder();
+            }
+
+            if (Url.IsLocalUrl(returnUrl))
+            {
+                return returnUrl;
+            }
+
+            return defaultValueBuilder();
+        }
         #endregion
     }
 }
