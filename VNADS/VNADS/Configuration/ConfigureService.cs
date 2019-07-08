@@ -32,9 +32,9 @@ namespace VNADS.Configuration
 
         private static void InitAuth(IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddMemoryCache();
-            //services.AddSingleton<IConfiguration>(configuration);
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddMemoryCache();
+            services.AddSingleton(configuration);
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             //services.AddAuthorization(options =>
             //{
@@ -50,10 +50,9 @@ namespace VNADS.Configuration
 
             services.AddAuthentication(options =>
                 {
-                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 })
                 .AddFacebook(options =>
                 {
@@ -67,18 +66,18 @@ namespace VNADS.Configuration
                 })
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
                 {
-                    options.LoginPath = "/auth/login";
-                    options.LogoutPath = "/auth/logout";
+                    options.LoginPath = "/Account/Login";
+                    options.LogoutPath = "/Account/Logout";
                 });
         }
 
         private static void InitMySql(IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            //services.Configure<CookiePolicyOptions>(options =>
+            //{
+            //    options.CheckConsentNeeded = context => true;
+            //    options.MinimumSameSitePolicy = SameSiteMode.None;
+            //});
 
             services.AddDbContext<CoffeeRenoContext>(options =>
                 options.UseMySql(configuration.GetConnectionString("DefaultConnection"),
@@ -93,7 +92,6 @@ namespace VNADS.Configuration
             services.AddIdentity<UserProfile, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityDbContext>()
                 .AddDefaultTokenProviders();
-            //opt => opt.EnableEndpointRouting = true
 
             services.AddCors(o => o.AddPolicy("CORSPolicy", builder =>
             {
@@ -102,7 +100,6 @@ namespace VNADS.Configuration
                     .AllowAnyHeader();
             }));
             services.AddMvc(opt => opt.EnableEndpointRouting = false);
-            //services.AddMvc();
         }
 
         private static void InitSwagger(IServiceCollection services)
@@ -123,19 +120,19 @@ namespace VNADS.Configuration
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseMvc();
-                app.UseSwagger();
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Test API V1");
-                });
+                // app.UseMvc();
+                //app.UseSwagger();
+                //app.UseSwaggerUI(c =>
+                //{
+                //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Test API V1");
+                //});
             }
             else
             {
                 app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseStaticFiles();
 
@@ -143,8 +140,8 @@ namespace VNADS.Configuration
 
             app.UseAuthentication();
 
-            app.UseDefaultFiles();
-            //{controller}.mvc/{action}/{id} - {controller=Home}/{action=Index}/{id?}
+            //  app.UseDefaultFiles();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -15,7 +15,7 @@ using VNADS.Models.AccountViewModels;
 
 namespace VNADS.Controllers
 {
-    [Route("auth")]
+    [Route("Account")]
     public class AuthController : Controller
     {
         private readonly IAccountManagerService _userService;
@@ -31,7 +31,7 @@ namespace VNADS.Controllers
             _signInManager = signInManager;
         }
 
-        [Route("login")]
+        [Route("Login")]
         public async Task<IActionResult> Index(string returnUrl)
         {
             // Clear the existing external cookie to ensure a clean login process
@@ -41,7 +41,7 @@ namespace VNADS.Controllers
             return View();
         }
 
-        [Route("login")]
+        [Route("Login")]
         [HttpPost]
         public async Task<IActionResult> Index(LoginViewModel model, string returnUrl = null)
         {
@@ -113,24 +113,33 @@ namespace VNADS.Controllers
             return Redirect(returnUrl);
         }
 
-        [Route("logout")]
+        [Route("Logout")]
         public async Task<IActionResult> Logout(string returnUrl)
         {
-            await HttpContext.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+
+            ViewBag.ReturnUrl = returnUrl;
+
+            if (!_configuration.GetValue<bool>("Account:ShowLogoutPrompt"))
+            {
+                return await Logout();
+            }
+
+            return View();
+            //await _signInManager.SignOutAsync();
+            //return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
-        [Route("logout")]
+        [Route("Logout")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
             if (User.Identity.IsAuthenticated)
             {
-                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+                await _signInManager.SignOutAsync();
             }
 
-            return RedirectToAction("Index", "Home",new { version = "1.0" });
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -208,11 +217,7 @@ namespace VNADS.Controllers
             };
             var userIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-            //userIdentity.AddClaims(claims);
-
             ClaimsPrincipal userPrincipal = new ClaimsPrincipal(userIdentity);
-
-            // await _signInManager.SignInAsync(user, isPersistent: false);
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal, authProperties);
         }
