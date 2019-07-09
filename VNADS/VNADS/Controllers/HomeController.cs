@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using VNADS.Models;
@@ -23,14 +24,14 @@ namespace VNADS.Controllers
         //  [Authorize]
         public async Task<IActionResult> Index()
         {
-            var authResult = await HttpContext.AuthenticateAsync();
+         //   var authResult = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             _logger.LogInformation("User logged in.");
             var a = User.Identity.IsAuthenticated;
             var vm = new ProfileViewModel
             {
-                Claims = authResult?.Principal?.Claims ?? new List<Claim>(),
-                Name = authResult?.Principal?.Identity?.Name ?? String.Empty
-            };
+                Claims = User?.Claims ?? new List<Claim>(),
+                Name = User?.Identity?.Name ?? String.Empty
+            };  
 
             return View(vm);
         }

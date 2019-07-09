@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Data.Entities;
@@ -68,51 +69,33 @@ namespace VNADS.Controllers
         }
 
         [Route("signin/{provider}")]
-        public IActionResult SignIn(string provider, string returnUrl = null) =>
-            Challenge(new AuthenticationProperties { RedirectUri = returnUrl ?? "/" }, provider);
-
-
-        public virtual async Task<ActionResult> ExternalLoginCallback(string returnUrl, string remoteError = null)
+        public IActionResult SignIn(string provider, string returnUrl = null)
         {
-            returnUrl = NormalizeReturnUrl(returnUrl);
-
-            //if (remoteError != null)
-            //{
-            //    _logger.Error("Remote Error in ExternalLoginCallback: " + remoteError);
-            //    throw new UserFriendlyException(L("CouldNotCompleteLoginOperation"));
-            //}
-
-            //var externalLoginInfo = await _signInManager.GetExternalLoginInfoAsync();
-            //if (externalLoginInfo == null)
-            //{
-            //    _logger.Warn("Could not get information from external login.");
-            //    return RedirectToAction(nameof(Login));
-            //}
-
-            //await _signInManager.SignOutAsync();
-
-            //var tenancyName = GetTenancyNameOrNull();
-
-            //var loginResult = await _logInManager.LoginAsync(externalLoginInfo, tenancyName);
-
-            //switch (loginResult.Result)
-            //{
-            //    case AbpLoginResultType.Success:
-            //        await _signInManager.SignInAsync(loginResult.Identity, false);
-            //        return Redirect(returnUrl);
-            //    case AbpLoginResultType.UnknownExternalLogin:
-            //        return await RegisterForExternalLogin(externalLoginInfo);
-            //    default:
-            //        throw _abpLoginResultTypeHelper.CreateExceptionForFailedLoginAttempt(
-            //            loginResult.Result,
-            //            externalLoginInfo.Principal.FindFirstValue(ClaimTypes.Email) ?? externalLoginInfo.ProviderKey,
-            //            tenancyName
-            //        );
-            //}
-
-            return Redirect(returnUrl);
+            var authenticationProperties = new AuthenticationProperties
+            {
+                RedirectUri = Url.Action("HandleExternalLogin", "Auth")
+            };
+            return Challenge(authenticationProperties, provider);
         }
+        public async Task<IActionResult> HandleExternalLogin()
+        {
+            var info = await _signInManager.GetExternalLoginInfoAsync();
+            var a = await HttpContext.AuthenticateAsync();    
+            var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
 
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, info.Principal.Claims.FirstOrDefault(s => s.Type == ClaimTypes.NameIdentifier)?.Value),
+                new Claim(ClaimTypes.Name, info.Principal.Claims.FirstOrDefault(s => s.Type == ClaimTypes.Name)?.Value),
+            };
+            var userIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            ClaimsPrincipal userPrincipal = new ClaimsPrincipal(userIdentity);
+            await HttpContext.SignInAsync("MainCookie", userPrincipal);
+            await HttpContext.SignOutAsync("ExternalCookie");
+            return Redirect("~/");
+        }
+       
         [Route("Logout")]
         public async Task<IActionResult> Logout(string returnUrl)
         {
@@ -228,12 +211,12 @@ namespace VNADS.Controllers
                    && Uri.IsWellFormedUriString(returnUrl, UriKind.Relative);
         }
 
-        public ActionResult RedirectToAppHome()
+        private ActionResult RedirectToAppHome()
         {
             return RedirectToAction("Index", "Home");
         }
 
-        public string GetAppHomeUrl()
+        private string GetAppHomeUrl()
         {
             return Url.Action("Index", "Home");
         }

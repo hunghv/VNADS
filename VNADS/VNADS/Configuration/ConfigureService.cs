@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using Data.Context;
 
 
 
 using Data.Entities;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,7 +41,11 @@ namespace VNADS.Configuration
             services.AddMemoryCache();
             services.AddSingleton(configuration);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
             //services.AddAuthorization(options =>
             //{
             //    options.AddPolicy("ConfirmUser",
@@ -61,10 +71,27 @@ namespace VNADS.Configuration
                 })
                 .AddGoogle(options =>
                 {
-                    options.ClientId = "996326863156-enla0cmr75m9i74p5ubstj2tqklpmh7a.apps.googleusercontent.com";
-                    options.ClientSecret = "Yuj_3Lq5KjJhgQ6tZ2UmuU52";
+                    options.ClientId = "238032973710-0lf98j7ij2oe5ka6e7s7jsct261vte3o.apps.googleusercontent.com";
+                    options.ClientSecret = "1LOhFHfJRTp5GFsmq5YWbM3O";
+                    options.ClaimActions.MapJsonKey("urn:google:picture", "picture", "url");
+                    options.ClaimActions.MapJsonKey("urn:google:locale", "locale", "string");
+                    options.SaveTokens = true;
+                    options.Events.OnCreatingTicket = ctx =>
+                    {
+                        List<AuthenticationToken> tokens = ctx.Properties.GetTokens().ToList();
+
+                        tokens.Add(new AuthenticationToken()
+                        {
+                            Name = "TicketCreated",
+                            Value = DateTime.UtcNow.ToString(CultureInfo.InvariantCulture)
+                        });
+
+                        ctx.Properties.StoreTokens(tokens);
+
+                        return Task.CompletedTask;
+                    };
                 })
-                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+                .AddCookie(options =>
                 {
                     options.LoginPath = "/Account/Login";
                     options.LogoutPath = "/Account/Logout";
@@ -73,12 +100,6 @@ namespace VNADS.Configuration
 
         private static void InitMySql(IServiceCollection services, IConfiguration configuration)
         {
-            //services.Configure<CookiePolicyOptions>(options =>
-            //{
-            //    options.CheckConsentNeeded = context => true;
-            //    options.MinimumSameSitePolicy = SameSiteMode.None;
-            //});
-
             services.AddDbContext<CoffeeRenoContext>(options =>
                 options.UseMySql(configuration.GetConnectionString("DefaultConnection"),
                     mySqlOptionsAction => mySqlOptionsAction.ServerVersion(new Version(), ServerType.MySql)
@@ -93,13 +114,15 @@ namespace VNADS.Configuration
                 .AddEntityFrameworkStores<IdentityDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddCors(o => o.AddPolicy("CORSPolicy", builder =>
-            {
-                builder.AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader();
-            }));
-            services.AddMvc(opt => opt.EnableEndpointRouting = false);
+            //services.AddCors(o => o.AddPolicy("CORSPolicy", builder =>
+            //{
+            //    builder.AllowAnyOrigin()
+            //        .AllowAnyMethod()
+            //        .AllowAnyHeader();
+            //}));
+            //services.AddMvc();
+            //services.AddHttpContextAccessor();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         private static void InitSwagger(IServiceCollection services)
@@ -120,7 +143,6 @@ namespace VNADS.Configuration
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                // app.UseMvc();
                 //app.UseSwagger();
                 //app.UseSwaggerUI(c =>
                 //{
@@ -131,16 +153,11 @@ namespace VNADS.Configuration
             {
                 app.UseHsts();
             }
-
-            // app.UseHttpsRedirection();
-
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseCookiePolicy();
-
             app.UseAuthentication();
 
-            //  app.UseDefaultFiles();
 
             app.UseMvc(routes =>
             {
