@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  vnads:
+    image: ${DOCKER_REGISTRY-}vnads
+    build:
+      context: .
+      dockerfile: VNADS\Dockerfile

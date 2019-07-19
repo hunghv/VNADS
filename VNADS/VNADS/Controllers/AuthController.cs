@@ -80,7 +80,11 @@ namespace VNADS.Controllers
         public async Task<IActionResult> HandleExternalLogin()
         {
             var info = await _signInManager.GetExternalLoginInfoAsync();
-            var a = await HttpContext.AuthenticateAsync();    
+            var a = await HttpContext.AuthenticateAsync();
+            if (null == info)
+            {
+                return Redirect("~/");
+            }
             var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
 
             var claims = new List<Claim>

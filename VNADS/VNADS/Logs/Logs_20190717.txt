@@ -1,0 +1,52 @@
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [5] - Request starting HTTP/1.1 GET https://172.20.248.24/   
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Routing.EndpointMiddleware [5] - Executing endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [5] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VNADS.Controllers.HomeController (VNADS). 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [5] - Executing action method VNADS.Controllers.HomeController.Index (VNADS) - Validation state: Valid 
+INFO  17-03-2019 00:03:20 VNADS.Controllers.HomeController [5] - User logged in. 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [5] - Executed action method VNADS.Controllers.HomeController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6.2513ms. 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [5] - Executing ViewResult, running view Index. 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [5] - Executed ViewResult - view Index executed in 444.5444ms. 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [5] - Executed action VNADS.Controllers.HomeController.Index (VNADS) in 489.8417ms 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Routing.EndpointMiddleware [5] - Executed endpoint 'VNADS.Controllers.HomeController.Index (VNADS)' 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [5] - Request finished in 784.3918ms 200 text/html; charset=utf-8 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 GET https://172.20.248.24/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0   
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [16] - Request starting HTTP/1.1 GET https://172.20.248.24/lib/jquery/dist/jquery.js   
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request starting HTTP/1.1 GET https://172.20.248.24/lib/bootstrap/dist/js/bootstrap.bundle.js   
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [5] - Request starting HTTP/1.1 GET https://172.20.248.24/lib/bootstrap/dist/css/bootstrap.css   
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request starting HTTP/1.1 GET https://172.20.248.24/css/site.css   
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [18] - Sending file. Request path: '/js/site.js'. Physical path: 'C:\app\wwwroot\js\site.js' 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [12] - Sending file. Request path: '/css/site.css'. Physical path: 'C:\app\wwwroot\css\site.css' 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [18] - Request finished in 66.9045ms 200 application/javascript 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request finished in 48.0683ms 200 text/css 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [18] - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\app\wwwroot\lib\bootstrap\dist\css\bootstrap.css' 
+INFO  17-03-2019 00:03:20 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [14] - Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'C:\app\wwwroot\lib\jquery\dist\jquery.js' 
+INFO  17-03-2019 00:03:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [18] - Request finished in 94.1491ms 200 text/css 
+INFO  17-03-2019 00:03:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request finished in 137.0052ms 200 application/javascript 
+INFO  17-03-2019 00:03:21 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [14] - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.js'. Physical path: 'C:\app\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js' 
+INFO  17-03-2019 00:03:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request finished in 147.1311ms 200 application/javascript 
+INFO  17-03-2019 00:03:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request starting HTTP/1.1 GET https://172.20.248.24/favicon.ico   
+INFO  17-03-2019 00:03:21 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [14] - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\app\wwwroot\favicon.ico' 
+INFO  17-03-2019 00:03:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request finished in 54.6153ms 200 image/x-icon 
+INFO  17-03-2019 00:03:25 Microsoft.AspNetCore.Hosting.Internal.WebHost [19] - Request starting HTTP/1.1 GET https://172.20.248.24/Account/Login   
+INFO  17-03-2019 00:03:25 Microsoft.AspNetCore.Routing.EndpointMiddleware [19] - Executing endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  17-03-2019 00:03:25 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [19] - Route matched with {action = "Index", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller VNADS.Controllers.AuthController (VNADS). 
+INFO  17-03-2019 00:03:26 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [19] - Executing action method VNADS.Controllers.AuthController.Index (VNADS) - Validation state: Valid 
+INFO  17-03-2019 00:03:26 Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler [19] - AuthenticationScheme: Identity.External signed out. 
+INFO  17-03-2019 00:03:26 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [19] - Executed action method VNADS.Controllers.AuthController.Index (VNADS), returned result Microsoft.AspNetCore.Mvc.ViewResult in 11.0673ms. 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [19] - Executing ViewResult, running view Index. 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [19] - Executed ViewResult - view Index executed in 174.5853ms. 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [19] - Executed action VNADS.Controllers.AuthController.Index (VNADS) in 1288.2222ms 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Routing.EndpointMiddleware [19] - Executed endpoint 'VNADS.Controllers.AuthController.Index (VNADS)' 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [19] - Request finished in 1346.1918ms 200 text/html; charset=utf-8 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [18] - Request starting HTTP/1.1 GET https://172.20.248.24/lib/bootstrap/dist/css/bootstrap.css   
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [18] - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\app\wwwroot\lib\bootstrap\dist\css\bootstrap.css' 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [18] - Request finished in 38.1024ms 200 text/css 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET https://172.20.248.24/css/site.css   
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://172.20.248.24/js/script.js   
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [9] - Sending file. Request path: '/css/site.css'. Physical path: 'C:\app\wwwroot\css\site.css' 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [5] - Request starting HTTP/1.1 GET https://172.20.248.24/css/style.css   
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 22.5626ms 200 text/css 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [11] - Sending file. Request path: '/js/script.js'. Physical path: 'C:\app\wwwroot\js\script.js' 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 31.9671ms 200 application/javascript 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [11] - Sending file. Request path: '/css/style.css'. Physical path: 'C:\app\wwwroot\css\style.css' 
+INFO  17-03-2019 00:03:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 31.9286ms 200 text/css 

@@ -5,9 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Data.Context;
-
-
-
 using Data.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -157,7 +154,6 @@ namespace VNADS.Configuration
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseAuthentication();
-
 
             app.UseMvc(routes =>
             {

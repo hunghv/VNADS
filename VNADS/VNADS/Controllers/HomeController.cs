@@ -22,16 +22,16 @@ namespace VNADS.Controllers
         }
 
         //  [Authorize]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-         //   var authResult = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            //   var authResult = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             _logger.LogInformation("User logged in.");
             var a = User.Identity.IsAuthenticated;
             var vm = new ProfileViewModel
             {
                 Claims = User?.Claims ?? new List<Claim>(),
                 Name = User?.Identity?.Name ?? String.Empty
-            };  
+            };
 
             return View(vm);
         }
